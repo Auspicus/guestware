@@ -55,19 +55,17 @@ instance
   parintGuestID: 123456789
 })
 .then(function (response) {
-  // By default, we are returned a raw string response and a parsed version
-  // If you would like to clean up your response, use the formatResponse function
-  // This will map response nodes to a key in a new object
+  // Here we are going to format a list of response data into a nice clean array
   var formattedResponse = instance.formatResponse(response.parsed, {
-    $$liTagName: 'virtual_GuestRewardTransactionAndDetails' #the tag name of list item,
-    GuestID: 'id' #from GuestID on each of the responses,
-    Description: 'desc' #from Description on each of the responses
+    $$liTagName: 'virtual_GuestRewardTransactionAndDetails', // #tag name of list item
+    GuestID: 'id',
+    Description: 'desc'
   });
   console.log(formattedResponse);
   // [
   //   {
-  //     id: '123456789',
-  //     desc: 'A description specific to this reward'
+  //     id: '123456789' #from GuestID of this reward,
+  //     desc: 'A description specific to this reward' #from Description of this reward
   //   },
   //   {
   //     id: '123456789',
