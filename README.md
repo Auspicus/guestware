@@ -1,7 +1,7 @@
 # guestware
 Because working with GuestWare shouldn't suck this much
 
-```
+```javascript
 require('dotenv').config();
 var GuestwareSoapClient = require('guestware');
 
