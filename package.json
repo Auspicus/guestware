@@ -1,6 +1,6 @@
 {
   "name": "guestware",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./lib/GuestwareSoapClient.js",
   "license": "MIT",
   "dependencies": {
