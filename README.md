@@ -48,4 +48,34 @@ instance
 .catch(function (err) {
   console.error(err)
 });
+
+// Make a request which returns a list
+instance
+.request('ReadGuestRewardTransactionAndDetailsByGuestID', {
+  parintGuestID: 123456789
+})
+.then(function (response) {
+  // By default, we are returned a raw string response and a parsed version
+  // If you would like to clean up your response, use the formatResponse function
+  // This will map response nodes to a key in a new object
+  var formattedResponse = instance.formatResponse(response.parsed, {
+    $$liTagName: 'virtual_GuestRewardTransactionAndDetails' #the tag name of list item,
+    GuestID: 'id' #from GuestID on each of the responses,
+    Description: 'desc' #from Description on each of the responses
+  });
+  console.log(formattedResponse);
+  // [
+  //   {
+  //     id: '123456789',
+  //     desc: 'A description specific to this reward'
+  //   },
+  //   {
+  //     id: '123456789',
+  //     desc: 'A different description'
+  //   }
+  // ]
+})
+.catch(function (err) {
+  console.error(err)
+});
 ```
