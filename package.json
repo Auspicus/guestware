@@ -1,7 +1,7 @@
 {
   "name": "guestware",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "./lib/GuestwareSoapClient.js",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^4.0.0",
