@@ -28,12 +28,12 @@ instance
   // If you would like to clean up your response, use the formatResponse function
   // This will map response nodes to a key in a new object
   var formattedResponse = instance.formatResponse(response.parsed, {
-    GuestID: 'id',
-    GuestLoginID: 'email',
-    GuestLoginPassword: 'password',
-    CultureID: 'langcode',
-    EntryDate: 'created',
-    LastEditDate: 'updated'
+    id: 'GuestID',
+    email: 'GuestLoginID',
+    password: 'GuestLoginPassword',
+    langcode: 'CultureID',
+    created: 'EntryDate',
+    updated: 'LastEditDate'
   });
   console.log(formattedResponse);
   // {
@@ -58,8 +58,8 @@ instance
   // Here we are going to format a list of response data into a nice clean array
   var formattedResponse = instance.formatResponse(response.parsed, {
     $$liTagName: 'virtual_GuestRewardTransactionAndDetails', // #tag name of list item
-    GuestID: 'id',
-    Description: 'desc'
+    id: 'GuestID',
+    desc: 'Description'
   });
   console.log(formattedResponse);
   // [

@@ -10,16 +10,19 @@ var instance = new GuestwareSoapClient(
   process.env.PASSWORD
 );
 
+// Make a request
 instance
-.request('ReadGuestRewardTransactionAndDetailsByGuestID', {
-  parintGuestID: 123456789
+.request('ReadGuestLoginGuestIDString', {
+  parstrGuestID: 'email@example.com'
 })
 .then(function (response) {
   var formattedResponse = instance.formatResponse(response.parsed, {
-    $$liTagName: 'virtual_GuestRewardTransactionAndDetails',
-    GuestID: 'id',
-    BillToLocationID: 'lid',
-    Description: 'desc'
+    id: 'GuestID',
+    email: 'GuestLoginID',
+    password: 'GuestLoginPassword',
+    langcode: 'CultureID',
+    created: 'EntryDate',
+    updated: 'LastEditDate'
   });
   console.log(formattedResponse);
 })
