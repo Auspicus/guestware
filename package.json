@@ -1,11 +1,18 @@
 {
   "name": "guestware",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./lib/GuestwareSoapClient.js",
   "license": "MIT",
+  "scripts": {
+    "docs": "jsdoc lib -d docs",
+    "precommit": "npm run docs"
+  },
   "dependencies": {
-    "dotenv": "^4.0.0",
     "unirest": "^0.5.1",
     "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "jsdoc": "^3.5.3"
   }
 }
