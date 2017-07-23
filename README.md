@@ -1,6 +1,8 @@
 # guestware
 Because working with GuestWare shouldn't suck this much
 
+[DISCLAIMER] This product is not feature complete and updates may not be backwards compatible
+
 ```javascript
 require('dotenv').config();
 var GuestwareSoapClient = require('guestware');
