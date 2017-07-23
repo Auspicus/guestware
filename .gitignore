@@ -4,5 +4,8 @@ node_modules
 // environment
 .env
 
+// testing
+coverage
+
 // system files
 .DS_Store
