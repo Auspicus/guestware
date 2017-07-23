@@ -1,4 +1,5 @@
 require('dotenv').config();
+var fs = require('fs');
 var GuestwareSoapClient = require('./lib/GuestwareSoapClient');
 
 var instance = new GuestwareSoapClient(
@@ -12,17 +13,20 @@ var instance = new GuestwareSoapClient(
 
 instance
 .helper
-.getGuestById(0)
-.then(function (response) {
-  console.log(response);
-})
-.catch(function (err) {
-  console.error(err)
-});
-
-instance
-.helper
-.getGuestByEmail('email@example.com')
+.updateGuestDetails([
+  {
+    $$elementType: 'GUEST_INTERESTS',
+    $$elementUpdateType: 'modified',
+    GuestID: '0',
+    Interest: 'Interesting Things',
+    CommFormatType: 'HTML',
+    OptOut: 'false',
+    EntryDate: new Date().toISOString(),
+    EntryBy: 'AccountName',
+    LastEditDate: new Date().toISOString(),
+    LastEditBy: 'AccountName'
+  }
+])
 .then(function (response) {
   console.log(response);
 })
