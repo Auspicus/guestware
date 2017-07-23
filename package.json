@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "docs": "jsdoc lib -d docs",
+    "docs": "jsdoc lib -r -d docs",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "precommit": [ "precommit-msg", "test", "docs" ],
