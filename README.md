@@ -1,7 +1,7 @@
 # guestware
 Because working with GuestWare shouldn't suck this much
 
-[DISCLAIMER] This product is not feature complete and updates may not be backwards compatible
+**[DISCLAIMER] This product is not feature complete and updates may not be backwards compatible**
 
 ```javascript
 require('dotenv').config();
@@ -24,7 +24,7 @@ var requestArguments = {
 
 // Make a request
 instance
-.request('ReadGuestLoginGuestIDString', requestArguments)
+.read('ReadGuestLoginGuestIDString', requestArguments)
 .then(function (response) {
   // By default, we are returned a raw string response and a parsed version
   // If you would like to clean up your response, use the formatResponse function
@@ -53,7 +53,7 @@ instance
 
 // Make a request which returns a list
 instance
-.request('ReadGuestRewardTransactionAndDetailsByGuestID', {
+.read('ReadGuestRewardTransactionAndDetailsByGuestID', {
   parintGuestID: 123456789
 })
 .then(function (response) {
