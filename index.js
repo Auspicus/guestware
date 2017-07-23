@@ -1,5 +1,4 @@
 require('dotenv').config();
-var fs = require('fs');
 var GuestwareSoapClient = require('./lib/GuestwareSoapClient');
 
 var instance = new GuestwareSoapClient(
