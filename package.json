@@ -1,18 +1,22 @@
 {
   "name": "guestware",
-  "version": "1.0.10",
-  "main": "./lib/GuestwareSoapClient.js",
+  "version": "1.1.0",
+  "main": "./lib/GuestwareSoapClient",
   "license": "MIT",
   "scripts": {
-    "docs": "jsdoc lib -d docs",
-    "precommit": "npm run docs"
+    "test": "jest",
+    "docs": "jsdoc lib -r -d docs",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "precommit": [ "precommit-msg", "test" ],
   "dependencies": {
     "unirest": "^0.5.1",
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
+    "jest": "^20.0.4",
     "dotenv": "^4.0.0",
+    "pre-commit": "^1.2.2",
     "jsdoc": "^3.5.3"
   }
 }
