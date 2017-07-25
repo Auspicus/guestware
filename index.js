@@ -5,9 +5,9 @@ var instance = new GuestwareSoapClient(
   process.env.WDSL,
   process.env.APPLICATION_NAME,
   process.env.VERSION_NUMBER,
-  process.env.APPLICATION_ID,
   process.env.USERNAME,
-  process.env.PASSWORD
+  process.env.PASSWORD,
+  process.env.APPLICATION_ID
 );
 
 instance

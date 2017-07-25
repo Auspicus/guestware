@@ -1,0 +1,34 @@
+{
+  "ReadGuestLoginGuestIDString": [{
+    "$$elementType": "GUEST_LOGIN",
+    "$$elementUpdateType": "modified",
+    "GuestID": 0,
+    "GuestLoginID": "email@example.com",
+    "GuestLoginPassword": "supersecurepassword",
+    "CultureID": "en",
+    "LogActivity": false,
+    "DisableLogin": false,
+    "EntryDate": "2017-07-23T20:59:41.481Z",
+    "EntryBy": "GWAdminAccountName",
+    "LastEditDate": "2017-07-23T20:59:41.481Z",
+    "LastEditBy": "GWAdminAccountName"
+  }],
+  "ReadGuestLogin": [{
+    "$$elementType": "GUEST_LOGIN",
+    "$$elementUpdateType": "modified",
+    "GuestID": 0,
+    "GuestLoginID": "email@example.com",
+    "GuestLoginPassword": "supersecurepassword",
+    "CultureID": "en",
+    "LogActivity": false,
+    "DisableLogin": false,
+    "EntryDate": "2017-07-23T20:59:41.481Z",
+    "EntryBy": "GWAdminAccountName",
+    "LastEditDate": "2017-07-23T20:59:41.481Z",
+    "LastEditBy": "GWAdminAccountName"
+  }],
+  "ReadGuestVisit": [{
+    "$$elementType": "",
+    "$$elementUpdateType": "modified"
+  }]
+}

@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>GuestwareSoapClient<span class="signature">(appName, versionNumber, appId, username, password)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>GuestwareSoapClient<span class="signature">(appName, versionNumber, username, password, appID)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,16 +41,12 @@
     
 
     
-    <h4 class="name" id="GuestwareSoapClient"><span class="type-signature"></span>new GuestwareSoapClient<span class="signature">(appName, versionNumber, appId, username, password)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="GuestwareSoapClient"><span class="type-signature"></span>new GuestwareSoapClient<span class="signature">(appName, versionNumber, username, password, appID)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Create a new GuestwareSoapClient
-</div>
 
 
 
@@ -131,29 +127,6 @@
 
         <tr>
             
-                <td class="name"><code>appId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Application wrapper ID</td>
-        </tr>
-
-    
-
-        <tr>
-            
                 <td class="name"><code>username</code></td>
             
 
@@ -197,6 +170,29 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>appID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">SOAP Application Wrapper ID (optional)</td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -234,7 +230,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line14">line 14</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -412,7 +408,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line269">line 269</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line243">line 243</a>
     </li></ul></dd>
     
 
@@ -464,7 +460,287 @@
     
 
     
-    <h4 class="name" id="generateMethodBody"><span class="type-signature"></span>generateMethodBody<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    <h4 class="name" id="generateElement"><span class="type-signature"></span>generateElement<span class="signature">(elementId, elementValues)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>elementId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">type of SOAP element (eg. GUEST_VISIT)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>elementValues</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">values of the SOAP element (eg. GuestID)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line62">line 62</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    {newObject<Array>, oldObject<Array>}
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="generateMockResponse"><span class="type-signature"></span>generateMockResponse<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line283">line 283</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    {raw, parsed}
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="generateReadBody"><span class="type-signature"></span>generateReadBody<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
     
 
     
@@ -472,7 +748,7 @@
 
 
 <div class="description">
-    Generate a request body for a specific SOAP method
+    Generate a read request body for a specific SOAP Read method
 </div>
 
 
@@ -516,7 +792,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line136">line 136</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line110">line 110</a>
     </li></ul></dd>
     
 
@@ -620,7 +896,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line214">line 214</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line188">line 188</a>
     </li></ul></dd>
     
 
@@ -647,115 +923,7 @@
 
         
 <div class="param-desc">
-    -> {raw, string}
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Object</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="generateUpdateElementBody"><span class="type-signature"></span>generateUpdateElementBody<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Generate a diff body for a specific SOAP diff
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line85">line 85</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    -> {newObject, oldObject}
+    {raw, string}
 </div>
 
 
@@ -836,7 +1004,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line158">line 158</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line132">line 132</a>
     </li></ul></dd>
     
 
@@ -863,7 +1031,7 @@
 
         
 <div class="param-desc">
-    -> {raw, string}
+    {raw, string}
 </div>
 
 
@@ -944,7 +1112,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line259">line 259</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line233">line 233</a>
     </li></ul></dd>
     
 
@@ -1048,7 +1216,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line251">line 251</a>
+        <a href="GuestwareSoapClient_index.js.html">GuestwareSoapClient/index.js</a>, <a href="GuestwareSoapClient_index.js.html#line225">line 225</a>
     </li></ul></dd>
     
 
@@ -1116,7 +1284,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Sun Jul 23 2017 02:58:08 GMT-0600 (CST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Mon Jul 24 2017 23:33:42 GMT-0600 (CST)
 </footer>
 
 <script> prettyPrint(); </script>
