@@ -1,6 +1,9 @@
 # guestware
 Because working with GuestWare shouldn't suck this much
 
+### Documentation
+https://edisch.github.io/guestware/docs/
+
 **[DISCLAIMER] This product is not feature complete and updates may not be backwards compatible**
 
 ```javascript
