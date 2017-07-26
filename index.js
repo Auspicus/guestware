@@ -1,7 +1,7 @@
 require('dotenv').config();
-var GuestwareSoapClient = require('./lib/GuestwareSoapClient');
+var Guestware = require('./lib/Guestware');
 
-var instance = new GuestwareSoapClient(
+var instance = new Guestware(
   process.env.WDSL,
   process.env.APPLICATION_NAME,
   process.env.VERSION_NUMBER,
@@ -11,21 +11,7 @@ var instance = new GuestwareSoapClient(
 );
 
 instance
-.helper
-.updateGuestDetails([
-  {
-    $$elementType: 'GUEST_INTERESTS',
-    $$elementUpdateType: 'modified',
-    GuestID: '0',
-    Interest: 'Interesting Things',
-    CommFormatType: 'HTML',
-    OptOut: 'false',
-    EntryDate: new Date().toISOString(),
-    EntryBy: 'AccountName',
-    LastEditDate: new Date().toISOString(),
-    LastEditBy: 'AccountName'
-  }
-])
+.getGuestInformationByID(0)
 .then(function (response) {
   console.log(response);
 })
