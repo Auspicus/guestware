@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/edisch/guestware.git"
   },
-  "main": "./lib/GuestwareSoapClient",
+  "main": "./lib/Guestware",
   "license": "MIT",
   "scripts": {
     "test": "jest",

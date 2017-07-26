@@ -5,10 +5,10 @@ Because working with GuestWare shouldn't suck this much
 
 ```javascript
 require('dotenv').config();
-var GuestwareSoapClient = require('guestware');
+var Guestware = require('guestware');
 
-// Create a new instance of the GuestwareSoapClient
-var instance = new GuestwareSoapClient(
+// Create a new instance of the Guestware
+var instance = new Guestware(
   process.env.WDSL,
   process.env.APPLICATION_NAME,
   process.env.VERSION_NUMBER,
@@ -59,9 +59,11 @@ instance
 .then(function (response) {
   // Here we are going to format a list of response data into a nice clean array
   var formattedResponse = instance.formatResponse(response.parsed, {
-    $$liTagName: 'virtual_GuestRewardTransactionAndDetails', // #tag name of list item
-    id: 'GuestID',
-    desc: 'Description'
+    liTagName: 'virtual_GuestRewardTransactionAndDetails', // #tag name of list item
+    map: {
+      id: 'GuestID',
+      desc: 'Description'
+    }
   });
   console.log(formattedResponse);
   // [
