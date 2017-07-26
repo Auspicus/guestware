@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "docs": "jsdoc lib -r -d docs",
+    "docs": "rimraf docs && jsdoc lib -r -d docs",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "precommit": [
@@ -21,9 +21,10 @@
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
-    "jest": "^20.0.4",
     "dotenv": "^4.0.0",
+    "jest": "^20.0.4",
+    "jsdoc": "^3.5.3",
     "pre-commit": "^1.2.2",
-    "jsdoc": "^3.5.3"
+    "rimraf": "^2.6.1"
   }
 }
