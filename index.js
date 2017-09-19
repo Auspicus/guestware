@@ -11,7 +11,7 @@ var instance = new Guestware(
 );
 
 instance
-.getGuestInformationByID(0)
+.getGuestDetails(process.env.GUESTWARE_USER_ID)
 .then(function (response) {
   console.log(response);
 })
