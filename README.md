@@ -2,7 +2,7 @@
 JS GuestWare Client
 
 ### Documentation
-https://edisch.github.io/guestware/docs/
+https://auspicus.github.io/guestware/docs/
 
 **[DISCLAIMER] This product is not feature complete and updates may not be backwards compatible**
 
