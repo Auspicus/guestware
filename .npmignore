@@ -1,3 +1,4 @@
-.gitignore
-docs
-./index.js
+/.gitignore
+/docs
+/index.js
+/.env

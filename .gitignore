@@ -1,11 +1,13 @@
-// dependencies
+# dependencies
 node_modules
 
-// environment
+# environment
 .env
 
-// testing
+# testing
 coverage
 
-// system files
+# system files
 .DS_Store
+
+/index.js
