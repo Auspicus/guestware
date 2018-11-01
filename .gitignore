@@ -1,13 +1,6 @@
-# dependencies
-node_modules
-
-# environment
-.env
-
-# testing
-coverage
-
-# system files
-.DS_Store
-
+/lib
+/node_modules
+/.env
+/coverage
 /index.js
+.DS_Store

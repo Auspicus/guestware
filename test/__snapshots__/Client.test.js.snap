@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Client .send => transport XML HTTP request 1`] = `
+Array [
+  Array [
+    "http://localhost:9000?wsdl",
+    Object {
+      "body": "<xml></xml>",
+      "headers": Object {
+        "Content-Type": "text/xml",
+      },
+      "method": "POST",
+    },
+  ],
+]
+`;

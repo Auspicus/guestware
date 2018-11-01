@@ -1,15 +1,17 @@
 {
   "name": "guestware",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/edisch/guestware.git"
   },
-  "main": "./lib/Guestware",
+  "main": "./lib/Guestware/Client.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
-    "docs": "rimraf docs && jsdoc lib -r -d docs",
+    "test": "npm run build && jest",
+    "postinstall": "npm run build",
+    "build": "tsc --declaration --outDir ./lib",
+    "docs": "tsc --declaration",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "precommit": [
@@ -17,14 +19,22 @@
     "test"
   ],
   "dependencies": {
-    "unirest": "^0.5.1",
+    "node-fetch": "^2.2.0",
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
+    "@types/node": "^10.12.1",
+    "@types/node-fetch": "^2.1.2",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
     "dotenv": "^4.0.0",
+    "eslint": "^5.8.0",
     "jest-cli": "^23.5.0",
     "jsdoc": "^3.5.3",
     "pre-commit": "^1.2.2",
-    "rimraf": "^2.6.1"
+    "regenerator-runtime": "^0.12.1",
+    "rimraf": "^2.6.1",
+    "typescript": "^3.1.4"
   }
 }
