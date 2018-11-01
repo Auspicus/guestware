@@ -50,7 +50,7 @@ describe('Client', () => {
       text: () => Promise.resolve('')
     }), configuration);
 
-    expect(client.send(new SoapRequest('<xml></xml>'))).rejects.toThrow(FailedRequest)
+    expect(client.send(new SoapRequest('<xml></xml>'))).rejects.toThrow()
   })
 
 })

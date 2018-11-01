@@ -11,7 +11,6 @@
     "test": "npm run build && jest",
     "postinstall": "npm run build",
     "build": "tsc --declaration --outDir ./lib",
-    "docs": "tsc --declaration",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
   "precommit": [
@@ -20,11 +19,13 @@
   ],
   "dependencies": {
     "node-fetch": "^2.2.0",
-    "xmldom": "^0.1.27"
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.27"
   },
   "devDependencies": {
     "@types/node": "^10.12.1",
     "@types/node-fetch": "^2.1.2",
+    "@types/xmldom": "^0.1.29",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",

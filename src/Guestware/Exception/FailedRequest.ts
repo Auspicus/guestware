@@ -1,9 +1,16 @@
 import SoapRequest from '../Soap/SoapRequest'
 
 class FailedRequest extends Error {
+
+  request: SoapRequest
   
   constructor(request: SoapRequest) {
-    super(request.xml)
+    super()
+    this.request = request
+  }
+
+  peekRequest() {
+    return this.request
   }
 
 }
