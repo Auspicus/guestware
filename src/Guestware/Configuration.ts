@@ -21,19 +21,23 @@ class Configuration {
   }
 
   apply(xmlBody: string) {
-    xmlBody = xmlBody.replace(/{{UserName}}/g, this.username)
-    xmlBody = xmlBody.replace(/{{PassWord}}/g, this.password)
-    xmlBody = xmlBody.replace(/{{AppName}}/g, this.appName)
-    xmlBody = xmlBody.replace(/{{Version}}/g, this.version)
-    return xmlBody
+    return (
+      xmlBody
+      .replace(/{{UserName}}/g, this.username)
+      .replace(/{{PassWord}}/g, this.password)
+      .replace(/{{AppName}}/g, this.appName)
+      .replace(/{{Version}}/g, this.version)
+    )
   }
 
   unapply(xmlBody: string) {
-    xmlBody = xmlBody.replace(this.username, `{{UserName}}`)
-    xmlBody = xmlBody.replace(this.password, `{{PassWord}}`)
-    xmlBody = xmlBody.replace(this.appName, `{{AppName}}`)
-    xmlBody = xmlBody.replace(this.version, `{{Version}}`)
-    return xmlBody
+    return (
+      xmlBody
+      .replace(this.username, `{{UserName}}`)
+      .replace(this.password, `{{PassWord}}`)
+      .replace(this.appName, `{{AppName}}`)
+      .replace(this.version, `{{Version}}`)
+    )
   }
 
 }

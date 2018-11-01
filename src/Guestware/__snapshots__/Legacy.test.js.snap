@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legacy .formatResponse => converts Node to object based on map 1`] = `
+Array [
+  Object {
+    "email": "{{Email}}",
+    "id": "{{GuestID}}",
+    "password": "{{Password}}",
+  },
+]
+`;
+
+exports[`Legacy .getGuestInformationByEmail => returns mapped response 1`] = `
+Object {
+  "created": "2017-02-02T15:26:32.543-08:00",
+  "createdBy": "Profile",
+  "disableLogin": "false",
+  "email": "{{Email}}",
+  "id": "{{GuestID}}",
+  "language": "{{Language}}",
+  "logActivity": "false",
+  "password": "{{Password}}",
+  "updated": "2017-08-21T14:32:20.743-07:00",
+  "updatedBy": "Profile",
+}
+`;
+
+exports[`Legacy .getGuestInformationByID => returns mapped response 1`] = `
+Object {
+  "created": "2017-02-02T15:26:32.543-08:00",
+  "createdBy": "Profile",
+  "disableLogin": "false",
+  "email": "{{Email}}",
+  "id": "{{GuestID}}",
+  "language": "{{Language}}",
+  "logActivity": "false",
+  "password": "{{Password}}",
+  "updated": "2017-08-21T14:32:20.743-07:00",
+  "updatedBy": "Profile",
+}
+`;

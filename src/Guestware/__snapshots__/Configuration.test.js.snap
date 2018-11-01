@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Configuration .apply => returns XML request with configuration applied 1`] = `
+"
+    <soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\" xmlns:web=\\"http://webservices.guestware.com/\\">
+      <soapenv:Header>
+        <web:GWCNOBJ>
+          <web:UserName>username</web:UserName>
+          <web:PassWord>password</web:PassWord>
+          <web:ApplicationName>appName</web:ApplicationName>
+          <web:VersionNumber>version</web:VersionNumber>
+        </web:GWCNOBJ>
+      </soapenv:Header>
+      <soapenv:Body>
+        <web:ReadGuestLogin>
+            <web:parintGuestID>1234567890</web:parintGuestID>
+        </web:ReadGuestLogin>
+      </soapenv:Body>
+    </soapenv:Envelope>"
+`;
+
+exports[`Configuration .unapply => returns XML request with configuration removed 1`] = `
+"
+    <soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\" xmlns:web=\\"http://webservices.guestware.com/\\">
+      <soapenv:Header>
+        <web:GWCNOBJ>
+          <web:UserName>{{UserName}}</web:UserName>
+          <web:PassWord>{{PassWord}}</web:PassWord>
+          <web:ApplicationName>{{AppName}}</web:ApplicationName>
+          <web:VersionNumber>{{Version}}</web:VersionNumber>
+        </web:GWCNOBJ>
+      </soapenv:Header>
+      <soapenv:Body>
+        <web:ReadGuestLogin>
+            <web:parintGuestID>1234567890</web:parintGuestID>
+        </web:ReadGuestLogin>
+      </soapenv:Body>
+    </soapenv:Envelope>"
+`;

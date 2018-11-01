@@ -20,7 +20,7 @@ class Client {
     const response = await this.transport(this.wsdl, {
       method: 'POST',
       headers: { 'Content-Type': 'text/xml' },
-      body: this.configuration.apply(soapRequest.xml)
+      body: this.configuration.apply(soapRequest.toString())
     })
 
     if (response.ok) {

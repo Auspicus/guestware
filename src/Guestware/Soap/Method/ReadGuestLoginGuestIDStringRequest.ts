@@ -1,4 +1,4 @@
-import { SoapRequest } from "..";
+import SoapRequest from '../SoapRequest'
 
 class ReadGuestLoginGuestIDStringRequest extends SoapRequest {
 
@@ -10,9 +10,9 @@ class ReadGuestLoginGuestIDStringRequest extends SoapRequest {
         <soapenv:Header>
           <web:GWCNOBJ>
             <web:UserName>{{UserName}}</web:UserName>
-            <web:PassWord>{{Password}}</web:PassWord>
-            <web:ApplicationName>{{ApplicationName}}</web:ApplicationName>
-            <web:VersionNumber>{{VersionNumber}}</web:VersionNumber>
+            <web:PassWord>{{PassWord}}</web:PassWord>
+            <web:ApplicationName>{{AppName}}</web:ApplicationName>
+            <web:VersionNumber>{{Version}}</web:VersionNumber>
           </web:GWCNOBJ>
         </soapenv:Header>
         <soapenv:Body>

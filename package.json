@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/edisch/guestware.git"
   },
-  "main": "./lib/Guestware/Client.js",
+  "main": "./lib/Guestware/index.js",
   "license": "MIT",
   "scripts": {
     "test": "npm run build && jest",

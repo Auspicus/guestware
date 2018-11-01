@@ -1,10 +1,14 @@
+import Legacy from './Legacy'
+
+export default Legacy
+
 import Client from './Client'
 import Configuration from './Configuration'
 import SoapRequest from './Soap/SoapRequest'
-import SoapResponse from './Soap/SoapResponse'
+import SoapResponse, { ParserStrictness } from './Soap/SoapResponse'
 import FailedRequest from './Exception/FailedRequest'
-import ReadGuestLoginRequest from './Soap/ReadGuestLoginRequest'
-import ReadGuestLoginGuestIDStringRequest from './Soap/ReadGuestLoginGuestIDStringRequest'
+import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
+import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
 
 export {
   Client,
@@ -13,5 +17,6 @@ export {
   SoapResponse,
   FailedRequest,
   ReadGuestLoginRequest,
-  ReadGuestLoginGuestIDStringRequest
+  ReadGuestLoginGuestIDStringRequest,
+  ParserStrictness
 }

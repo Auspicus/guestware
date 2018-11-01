@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SoapResponse .format => should not throw an error when map item is not found and running in flexible parse mode 1`] = `
+Array [
+  Object {
+    "id": "{{GuestID}}",
+  },
+]
+`;
+
+exports[`SoapResponse .format => should return an array of objects formatted using the map 1`] = `
+Array [
+  Object {
+    "id": "{{GuestID}}",
+    "password": "{{Password}}",
+    "username": "{{Email}}",
+  },
+]
+`;
+
 exports[`SoapResponse .queryAll => should return a list of DOM nodes 1`] = `
 "<GUEST_LOGIN xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\" diffgr:id=\\"GUEST_LOGIN1\\" xmlns:msdata=\\"urn:schemas-microsoft-com:xml-msdata\\" msdata:rowOrder=\\"0\\" xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\">
                      <GuestID>{{GuestID}}</GuestID>
@@ -9,9 +27,9 @@ exports[`SoapResponse .queryAll => should return a list of DOM nodes 1`] = `
                      <LogActivity>false</LogActivity>
                      <DisableLogin>false</DisableLogin>
                      <EntryDate>2017-02-02T15:26:32.543-08:00</EntryDate>
-                     <EntryBy>Web Profile</EntryBy>
+                     <EntryBy>Profile</EntryBy>
                      <LastEditDate>2017-08-21T14:32:20.743-07:00</LastEditDate>
-                     <LastEditBy>Web Profile</LastEditBy>
+                     <LastEditBy>Profile</LastEditBy>
                   </GUEST_LOGIN>"
 `;
 
@@ -24,8 +42,8 @@ exports[`SoapResponse .queryFirst => should return the first DOM node match 1`] 
                      <LogActivity>false</LogActivity>
                      <DisableLogin>false</DisableLogin>
                      <EntryDate>2017-02-02T15:26:32.543-08:00</EntryDate>
-                     <EntryBy>Web Profile</EntryBy>
+                     <EntryBy>Profile</EntryBy>
                      <LastEditDate>2017-08-21T14:32:20.743-07:00</LastEditDate>
-                     <LastEditBy>Web Profile</LastEditBy>
+                     <LastEditBy>Profile</LastEditBy>
                   </GUEST_LOGIN>"
 `;

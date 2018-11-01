@@ -1,4 +1,4 @@
-import { Configuration, Client, SoapRequest, FailedRequest } from '../lib/index.js'
+import { Configuration, Client, SoapRequest, FailedRequest } from '../../lib/index.js'
 
 const mockFetch = (response) => jest.fn().mockImplementation(() => Promise.resolve(response))
 

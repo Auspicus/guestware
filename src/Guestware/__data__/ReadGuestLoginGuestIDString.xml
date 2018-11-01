@@ -20,9 +20,9 @@
                      <LogActivity>false</LogActivity>
                      <DisableLogin>false</DisableLogin>
                      <EntryDate>2017-02-02T15:26:32.543-08:00</EntryDate>
-                     <EntryBy>Web Profile</EntryBy>
+                     <EntryBy>Profile</EntryBy>
                      <LastEditDate>2017-08-21T14:32:20.743-07:00</LastEditDate>
-                     <LastEditBy>Web Profile</LastEditBy>
+                     <LastEditBy>Profile</LastEditBy>
                   </GUEST_LOGIN>
                </dstGST>
             </diffgr:diffgram>
