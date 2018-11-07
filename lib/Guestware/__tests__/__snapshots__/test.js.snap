@@ -52,7 +52,7 @@ Array [
   "</TEST_ELEMENT>",
   "</dstGST>",
   "<diffgr:before>",
-  "<TEST_ELEMENT diffgr:id=\\"TEST_ELEMENT1\\" msdata:rowOrder=\\"1\\">",
+  "<TEST_ELEMENT diffgr:id=\\"TEST_ELEMENT1\\" xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\" msdata:rowOrder=\\"1\\">",
   "<ExampleAttribute>ExampleValue</ExampleAttribute>",
   "<TestAttribute>1</TestAttribute>",
   "</TEST_ELEMENT>",
