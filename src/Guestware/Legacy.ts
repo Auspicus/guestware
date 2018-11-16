@@ -5,10 +5,17 @@ import { useNamespaces as XPathSelectWithNamespaces } from 'xpath'
 import Client from './Client'
 import Configuration from './Configuration'
 
-import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest';
-import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest';
-import ReadGuestVisitRequest from './Soap/Method/ReadGuestVisitRequest';
-import ReadGuestDetailTablesRequest from './Soap/Method/ReadGuestDetailTablesRequest';
+import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
+import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
+import ReadGuestVisitRequest from './Soap/Method/ReadGuestVisitRequest'
+import ReadGuestDetailTablesRequest from './Soap/Method/ReadGuestDetailTablesRequest'
+import ReadGuestRewardTransactionAndDetailsByGuestIDRequest from './Soap/Method/ReadGuestRewardTransactionAndDetailsByGuestIDRequest'
+import ReadGuestRewardBalanceRequest from './Soap/Method/ReadGuestRewardBalanceRequest'
+
+import DatasetGuest from './Soap/Dataset/DatasetGuest'
+import DatasetGuestRow from './Soap/Dataset/DatasetGuestRow'
+import DiffgramRowAction from './Soap/DiffgramRowAction'
+import UpdateGuestDetailTablesRequest from './Soap/Method/UpdateGuestDetailTablesRequest'
 
 class Legacy {
   
@@ -31,7 +38,10 @@ class Legacy {
       password
     })
     this.parser = new DOMParser()
-    this.client = new Client(fetch, configuration)
+    this.client = new Client({
+      transport: fetch,
+      configuration,
+    })
   }
 
   async getGuestInformationByID(id: string): Promise<{
@@ -256,6 +266,52 @@ class Legacy {
         }
       })
     )
+  }
+
+  async getGuestRewards(guestID: string) {
+    const xmlResponse = await this.client.send(new ReadGuestRewardTransactionAndDetailsByGuestIDRequest(guestID))
+
+    return {
+      parsed: this.parser.parseFromString(xmlResponse),
+      raw: xmlResponse
+    }
+  }
+
+  async getGuestRewardBalance(guestID: string) {
+    const xmlResponse = await this.client.send(new ReadGuestRewardBalanceRequest(guestID))
+
+    return {
+      parsed: this.parser.parseFromString(xmlResponse),
+      raw: xmlResponse
+    }
+  }
+
+  async updateGuestDetails(details: {
+    type: string,
+    updated: boolean,
+    properties: { [fieldName: string]: string }
+  }[]): Promise<{ parsed: Document, raw: string }> {
+    const dataset = this.detailMapToDataset(details)
+    const xmlResponse = await this.client.send(new UpdateGuestDetailTablesRequest(dataset))
+
+    return {
+      parsed: this.parser.parseFromString(xmlResponse),
+      raw: xmlResponse
+    }
+  }
+
+  detailMapToDataset(details: {
+    type: string,
+    updated: boolean,
+    properties: { [fieldName: string]: string }
+  }[]): DatasetGuest {
+    return new DatasetGuest(details.map(detail => {
+      return new DatasetGuestRow(
+        detail.type,
+        detail.updated ? DiffgramRowAction.Modified : DiffgramRowAction.Inserted,
+        detail.properties
+      )
+    }))
   }
 
   formatResponse(parsed: Document, options: {

@@ -28,7 +28,7 @@ describe('SoapResponse', () => {
       ok: true,
       text: () => readMockData('ReadGuestLogin.xml')
     })
-    const client = new Client(mockFn, configuration);
+    const client = new Client({ transport: mockFn, configuration });
 
     let soapResponse
     try {
@@ -46,7 +46,7 @@ describe('SoapResponse', () => {
       ok: true,
       text: () => readMockData('ReadGuestLoginGuestIDString.xml')
     })
-    const client = new Client(mockFn, configuration);
+    const client = new Client({ transport: mockFn, configuration });
 
     let soapResponse
     try {
@@ -64,7 +64,7 @@ describe('SoapResponse', () => {
       ok: true,
       text: () => readMockData('ReadGuestLoginGuestIDString.xml')
     })
-    const client = new Client(mockFn, configuration);
+    const client = new Client({ transport: mockFn, configuration });
 
     let soapResponse
     try {
@@ -85,7 +85,7 @@ describe('SoapResponse', () => {
       ok: true,
       text: () => readMockData('ReadGuestLoginGuestIDString.xml')
     })
-    const client = new Client(mockFn, configuration);
+    const client = new Client({ transport: mockFn, configuration });
 
     let soapResponse
     try {
@@ -106,7 +106,7 @@ describe('SoapResponse', () => {
       ok: true,
       text: () => readMockData('ReadGuestLoginGuestIDString.xml')
     })
-    const client = new Client(mockFn, configuration);
+    const client = new Client({ transport: mockFn, configuration });
 
     let soapResponse
     try {

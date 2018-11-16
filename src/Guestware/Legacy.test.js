@@ -43,6 +43,28 @@ describe('Legacy', () => {
     expect(legacy.formatResponse(doc, options)).toMatchSnapshot()
   })
 
+  test('.detailMapToDataset => converts detail map array to Dataset', async () => {
+    expect(legacy.detailMapToDataset([
+      {
+        type: 'GUEST',
+        updated: true,
+        properties: {
+          GuestID: '1234567890',
+          GivenName: 'Bob',
+          Surname: 'Dylan',
+        }
+      },
+      {
+        type: 'GUEST_INTERESTS',
+        updated: false,
+        properties: {
+          GuestID: '1234567890',
+          Interest: 'Cookies',
+        }
+      },
+    ])).toMatchSnapshot()
+  })
+
   test('.getGuestInformationByID => returns mapped response', async () => {
     expect.assertions(1)
     __setMockResponses([

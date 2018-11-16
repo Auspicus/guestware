@@ -18,7 +18,7 @@ describe('Client', () => {
       ok: true,
       text: () => Promise.resolve('')
     })
-    const client = new Client(mockFn, configuration);
+    const client = new Client({ transport: mockFn, configuration });
 
     try {
       await client.send(new SoapRequest('<xml></xml>'))
@@ -30,10 +30,10 @@ describe('Client', () => {
   test('.send => return xml response on success', async () => {
     expect.assertions(1)
     const responseBody = '<xml>Response Body</xml>'
-    const client = new Client(mockFetch({
+    const client = new Client({ transport: mockFetch({
       ok: true,
       text: () => Promise.resolve(responseBody)
-    }), configuration);
+    }), configuration });
 
     let response
     try {
@@ -45,10 +45,10 @@ describe('Client', () => {
 
   test('.send => throw FailedRequest on error', async () => {
     expect.assertions(1)
-    const client = new Client(mockFetch({
+    const client = new Client({ transport: mockFetch({
       ok: false,
       text: () => Promise.resolve('')
-    }), configuration);
+    }), configuration });
 
     expect(client.send(new SoapRequest('<xml></xml>'))).rejects.toThrow()
   })

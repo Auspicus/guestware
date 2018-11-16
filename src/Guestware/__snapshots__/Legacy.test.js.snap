@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Legacy .detailMapToDataset => converts detail map array to Dataset 1`] = `
+DatasetGuest {
+  "components": Array [
+    DatasetGuestRow {
+      "diff": "modified",
+      "name": "GUEST",
+      "properties": Object {
+        "GivenName": "Bob",
+        "GuestID": "1234567890",
+        "Surname": "Dylan",
+      },
+    },
+    DatasetGuestRow {
+      "diff": "inserted",
+      "name": "GUEST_INTERESTS",
+      "properties": Object {
+        "GuestID": "1234567890",
+        "Interest": "Cookies",
+      },
+    },
+  ],
+}
+`;
+
 exports[`Legacy .formatResponse => converts Node to object based on map 1`] = `
 Array [
   Object {

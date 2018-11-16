@@ -12,7 +12,7 @@ export { ParserStrictness }
 class SoapResponse {
   
   xml: string
-  document: any
+  document: Document
 
   constructor(xml: string) {
     this.xml = xml

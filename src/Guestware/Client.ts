@@ -1,4 +1,4 @@
-import { Response, Request, RequestInit } from 'node-fetch'
+import fetch, { Response, Request, RequestInit } from 'node-fetch'
 
 import SoapRequest from './Soap/SoapRequest'
 import FailedRequest from './Exception/FailedRequest'
@@ -10,26 +10,28 @@ class Client {
   wsdl: string
   configuration: Configuration
 
-  constructor(transport: (url: string | Request, init?: RequestInit) => Promise<Response>, configuration: Configuration) {
-    this.transport = transport
+  constructor(options: {
+    transport: (url: string | Request, init?: RequestInit) => Promise<Response>
+    configuration: Configuration
+  }) {
+    const { transport, configuration } = options
+    this.transport = transport ? transport : fetch
     this.wsdl = configuration.wsdl
     this.configuration = configuration
   }
 
-  async send(soapRequest: SoapRequest) {
+  async send(soapRequest: SoapRequest): Promise<string> {
     const response = await this.transport(this.wsdl, {
       method: 'POST',
       headers: { 'Content-Type': 'text/xml' },
       body: this.configuration.apply(soapRequest.toString())
     })
 
+    let xml = await response.text()
     if (response.ok) {
-      try {
-        const xml = await response.text()
-        return xml
-      } catch (e) { throw e; }
+      return xml
     } else {
-      throw new FailedRequest(soapRequest)
+      throw new FailedRequest(`Failed Request:\n${soapRequest}\n${xml}`)
     }
   }
 

@@ -1,9 +1,3 @@
-class PropertyNotFound extends Error {
-
-  constructor(property: string) {
-    super(`PropertyNotFound: ${property}`)
-  }
-
-}
+class PropertyNotFound extends Error {}
 
 export default PropertyNotFound
