@@ -10,6 +10,7 @@ import SoapResponse, { ParserStrictness } from './Soap/SoapResponse'
 import DiffgramRowAction from './Soap/DiffgramRowAction'
 
 import FailedRequest from './Exception/FailedRequest'
+import PropertyNotFound from './Exception/PropertyNotFound'
 
 import ReadGuestDetailTablesRequest from './Soap/Method/ReadGuestDetailTablesRequest'
 import ReadGuestListSearchRequest from './Soap/Method/ReadGuestListSearchRequest'
@@ -33,6 +34,7 @@ export {
   DiffgramRowAction,
 
   FailedRequest,
+  PropertyNotFound,
   
   ReadGuestDetailTablesRequest,
   ReadGuestListSearchRequest,
