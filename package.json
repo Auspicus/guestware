@@ -9,6 +9,7 @@
   "license": "MIT",
   "scripts": {
     "test": "npm run build && jest",
+    "docs": "typedoc --module commonjs --out docs src",
     "postinstall": "npm run build",
     "build": "tsc --declaration --outDir ./lib",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
@@ -36,6 +37,7 @@
     "pre-commit": "^1.2.2",
     "regenerator-runtime": "^0.12.1",
     "rimraf": "^2.6.1",
+    "typedoc": "^0.13.0",
     "typescript": "^3.1.4"
   }
 }
