@@ -1,5 +1,6 @@
-/lib
+/src
+/coverage
+/tsconfig.json
 /.gitignore
-/docs
-/index.js
 /.env
+/.babelrc

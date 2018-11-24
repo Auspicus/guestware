@@ -11,9 +11,14 @@ import DiffgramRowAction from './Soap/DiffgramRowAction'
 
 import FailedRequest from './Exception/FailedRequest'
 
-import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
-import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
+import ReadGuestDetailTablesRequest from './Soap/Method/ReadGuestDetailTablesRequest'
 import ReadGuestListSearchRequest from './Soap/Method/ReadGuestListSearchRequest'
+import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
+import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
+import ReadGuestRewardBalanceRequest from './Soap/Method/ReadGuestRewardBalanceRequest'
+import ReadGuestRewardTransactionAndDetailsByGuestIDRequest from './Soap/Method/ReadGuestRewardTransactionAndDetailsByGuestIDRequest'
+import ReadGuestVisitRequest from './Soap/Method/ReadGuestVisitRequest'
+
 import UpdateGuestDetailTablesRequest from './Soap/Method/UpdateGuestDetailTablesRequest'
 import DatasetGuest, { fromResponse as DatasetGuestFromResponse } from './Soap/Dataset/DatasetGuest'
 import DatasetGuestRow, { fromElements as DatasetGuestRowFromElement } from './Soap/Dataset/DatasetGuestRow'
@@ -29,10 +34,16 @@ export {
 
   FailedRequest,
   
-  ReadGuestLoginRequest,
-  ReadGuestLoginGuestIDStringRequest,
+  ReadGuestDetailTablesRequest,
   ReadGuestListSearchRequest,
+  ReadGuestLoginGuestIDStringRequest,
+  ReadGuestLoginRequest,
+  ReadGuestRewardBalanceRequest,
+  ReadGuestRewardTransactionAndDetailsByGuestIDRequest,
+  ReadGuestVisitRequest,
+
   UpdateGuestDetailTablesRequest,
+
   DatasetGuest,
   DatasetGuestFromResponse,
   DatasetGuestRow,

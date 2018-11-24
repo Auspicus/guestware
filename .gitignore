@@ -2,6 +2,4 @@
 /node_modules
 /.env
 /coverage
-/implementation.js
-/test.js
 .DS_Store
