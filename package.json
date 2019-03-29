@@ -11,11 +11,13 @@
     "test": "npm run build && jest",
     "postinstall": "npm run build",
     "build": "tsc --declaration --outDir ./lib",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "precommit-success": "echo 'Pre-commit checks passed! Committing changes.' && exit 0"
   },
   "precommit": [
     "precommit-msg",
-    "test"
+    "test",
+    "precommit-success"
   ],
   "dependencies": {
     "node-fetch": "^2.2.0",
