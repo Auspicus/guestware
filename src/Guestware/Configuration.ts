@@ -5,19 +5,22 @@ class Configuration {
   password: string
   appName: string
   version: string
+  appId: string
 
   constructor({
     wsdl,
     username,
     password,
     appName,
-    version
+    version,
+    appId = null
   }) {
     this.wsdl = wsdl
     this.username = username
     this.password = password
     this.appName = appName
     this.version = version
+    this.appId = appId
   }
 
   apply(xmlBody: string) {

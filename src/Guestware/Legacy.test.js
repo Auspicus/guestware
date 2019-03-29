@@ -23,10 +23,44 @@ describe('Legacy', () => {
     'wsdl',
     'appName',
     'version',
-    'appId',
     'username',
-    'password'
+    'password',
+    'appId',
   )
+
+  test('.generateReadRequestBody => returns request to send in a read request', () => {
+    expect(legacy.generateReadRequestBody('ReadGuestDetailTables', { parintGuestID: 123456789 }).string).toMatchSnapshot()
+  })
+
+  test('.generateUpdateRequestBody => returns request to send in an update request', async () => {
+    expect(legacy.generateUpdateRequestBody(
+      'UpdateGuestDetailTables',
+      'pardstGuestDetailTables',
+      [
+        {
+          type: 'GUEST',
+          updated: false,
+          properties: {
+            GuestID: 0,
+            Surname: 'Last',
+            GivenName: 'First'
+          }
+        }
+      ]
+    ).string).toMatchSnapshot()
+  })
+  
+  test('.generateUpdateReadRequest => returns headers with appId', () => {
+    const testLegacy = new Legacy(
+      'wsdl',
+      'appName',
+      'version',
+      'username',
+      'password',
+      'appId',
+    )
+    expect(testLegacy.generateReadRequestBody('ReadGuestDetailTables', { parintGuestID: 123456789 }).string).toMatchSnapshot()
+  })
 
   test('.formatResponse => converts Node to object based on map', async () => {
     expect.assertions(1)

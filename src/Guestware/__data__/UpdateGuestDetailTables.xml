@@ -61,7 +61,7 @@
               <PreferredFlag>true</PreferredFlag>
             </GUEST_ADDRESS>
             <GUEST_CONTACT_LOG diffgr:id="GUEST_CONTACT_LOG1" msdata:rowOrder="0">
-              <ContactLogNo>45040558</ContactLogNo>
+              <ContactLogNo>0</ContactLogNo>
               <GuestID>{{GuestID}}</GuestID>
               <LocationID>0</LocationID>
               <ContactDate>2018-10-12T07:24:26.549-07:00</ContactDate>

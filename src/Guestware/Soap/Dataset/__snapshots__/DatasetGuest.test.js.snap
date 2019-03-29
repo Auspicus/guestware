@@ -38,7 +38,7 @@ exports[`DatasetGuest .fromResponse => returns DatasetGuest from SoapResponse 1`
       </GUEST_ADDRESS>
     
       <GUEST_CONTACT_LOG diffgr:id=\\"GUEST_CONTACT_LOG1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-        <ContactLogNo>45040558</ContactLogNo><GuestID>{{GuestID}}</GuestID><LocationID>0</LocationID><ContactDate>2018-10-12T07:24:26.549-07:00</ContactDate><ContactTime>2018-10-12T07:24:26.549-07:00</ContactTime><ContactType>Web</ContactType><ContactItem>Profile</ContactItem><ContactStatus>Complete</ContactStatus><ContactBy>Web</ContactBy><EntryBy>Profile</EntryBy><EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate><LastEditBy>Profile</LastEditBy><LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
+        <ContactLogNo>0</ContactLogNo><GuestID>{{GuestID}}</GuestID><LocationID>0</LocationID><ContactDate>2018-10-12T07:24:26.549-07:00</ContactDate><ContactTime>2018-10-12T07:24:26.549-07:00</ContactTime><ContactType>Web</ContactType><ContactItem>Profile</ContactItem><ContactStatus>Complete</ContactStatus><ContactBy>Web</ContactBy><EntryBy>Profile</EntryBy><EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate><LastEditBy>Profile</LastEditBy><LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
       </GUEST_CONTACT_LOG>
     
         </dstGST>
