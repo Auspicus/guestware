@@ -69,6 +69,11 @@
 				<p>It provides a simple interface to make edits to values in the DataSet.</p>
 				<h2 id="potential-issues">Potential issues</h2>
 				<p>There may in some cases arise an issue where two or more parties are editing the same Dataset. This Guestware client makes no attempt to solve this issue for you so if you would like to prevent simultaneous editing of the same profile we recommend implementing a lock system.</p>
+				<h3 id="upgrading-to-v2-x">Upgrading to v2.x</h3>
+				<p>Backwards compatibility has been maintained between v2.x and v1.x.
+					However, because v2.x uses ES6 modules (<code>export</code> / <code>import</code>) you will need to
+				change your require statements from <code>require(&#39;guestware&#39;)</code> to <code>require(&#39;guestware&#39;).default</code>.</p>
+				<p>However, all API methods have been maintained (but are deprecated) for backwards compatibility.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -124,6 +129,9 @@
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_soap_method_updateguestdetailtablesrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_soap_method_updateguestloginrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Login<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_soap_soaprequest_.html">"<wbr>Soap/<wbr>Soap<wbr>Request"</a>
