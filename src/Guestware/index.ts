@@ -14,6 +14,7 @@ import FailedRequest from './Exception/FailedRequest'
 import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
 import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
 import ReadGuestListSearchRequest from './Soap/Method/ReadGuestListSearchRequest'
+import UpdateGuestLoginRequest from './Soap/Method/UpdateGuestLoginRequest'
 import UpdateGuestDetailTablesRequest from './Soap/Method/UpdateGuestDetailTablesRequest'
 import DatasetGuest, { fromResponse as DatasetGuestFromResponse } from './Soap/Dataset/DatasetGuest'
 import DatasetGuestRow, { fromElements as DatasetGuestRowFromElement } from './Soap/Dataset/DatasetGuestRow'
@@ -32,6 +33,7 @@ export {
   ReadGuestLoginRequest,
   ReadGuestLoginGuestIDStringRequest,
   ReadGuestListSearchRequest,
+  UpdateGuestLoginRequest,
   UpdateGuestDetailTablesRequest,
   DatasetGuest,
   DatasetGuestFromResponse,

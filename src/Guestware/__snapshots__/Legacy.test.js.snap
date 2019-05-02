@@ -11,6 +11,7 @@ DatasetGuest {
         "GuestID": "1234567890",
         "Surname": "Dylan",
       },
+      "updatedProperties": Object {},
     },
     DatasetGuestRow {
       "diff": "inserted",
@@ -19,6 +20,7 @@ DatasetGuest {
         "GuestID": "1234567890",
         "Interest": "Cookies",
       },
+      "updatedProperties": Object {},
     },
   ],
 }

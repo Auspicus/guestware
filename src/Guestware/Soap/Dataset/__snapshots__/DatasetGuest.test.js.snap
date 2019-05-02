@@ -21,26 +21,26 @@ exports[`DatasetGuest .fromResponse => returns DatasetGuest from SoapResponse 1`
         xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\">
         <dstGST xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\">
           
-      <GUEST diffgr:id=\\"GUEST1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-        <GuestID>{{GuestID}}</GuestID><GstRecordType>{{GstRecordType}}</GstRecordType><NamePrefix>{{Prefix}}</NamePrefix><Surname>{{Surname}}</Surname><GivenName>{{GivenName}}</GivenName><Gender>{{Gender}}</Gender><Source>{{Source}}</Source><ProfileType>{{ProfileType}}</ProfileType><EntryDate>2018-10-12T00:24:27.023-07:00</EntryDate><EntryBy>Profile</EntryBy><LastEditDate>2018-10-12T00:24:27.023-07:00</LastEditDate><LastEditBy>Profile</LastEditBy>
-      </GUEST>
-    
-      <GUEST_COMM_METHOD diffgr:id=\\"GUEST_COMM_METHOD1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-        <GuestID>{{GuestID}}</GuestID><GuestCommType>Email</GuestCommType><CommValue>{{Email}}</CommValue><FormatType>TEXT</FormatType><OptOut>false</OptOut><PreferredFlag>false</PreferredFlag>
-      </GUEST_COMM_METHOD>
-    
-      <GUEST_ISSUED_ID diffgr:id=\\"GUEST_ISSUED_ID1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-        <IssueLogNo>0</IssueLogNo><GuestID>{{GuestID}}</GuestID><IssueDate>2018-10-12T07:24:26.549-07:00</IssueDate><ContactType>Email</ContactType><AssociateName>Unassigned</AssociateName><EntryBy>Profile</EntryBy><EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate><LastEditBy>Profile</LastEditBy><LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
-      </GUEST_ISSUED_ID>
-    
-      <GUEST_ADDRESS diffgr:id=\\"GUEST_ADDRESS1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-        <GuestID>{{GuestID}}</GuestID><AddressType>Home</AddressType><CountryCode>null</CountryCode><PostalCode>null</PostalCode><StateCode>null</StateCode><City>null</City><AddressLine1>null</AddressLine1><AddressLine2>null</AddressLine2><Undeliverable>false</Undeliverable><PreferredFlag>true</PreferredFlag>
-      </GUEST_ADDRESS>
-    
-      <GUEST_CONTACT_LOG diffgr:id=\\"GUEST_CONTACT_LOG1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-        <ContactLogNo>0</ContactLogNo><GuestID>{{GuestID}}</GuestID><LocationID>0</LocationID><ContactDate>2018-10-12T07:24:26.549-07:00</ContactDate><ContactTime>2018-10-12T07:24:26.549-07:00</ContactTime><ContactType>Web</ContactType><ContactItem>Profile</ContactItem><ContactStatus>Complete</ContactStatus><ContactBy>Web</ContactBy><EntryBy>Profile</EntryBy><EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate><LastEditBy>Profile</LastEditBy><LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
-      </GUEST_CONTACT_LOG>
-    
+        <GUEST diffgr:id=\\"GUEST1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
+          <GuestID>{{GuestID}}</GuestID><GstRecordType>{{GstRecordType}}</GstRecordType><NamePrefix>{{Prefix}}</NamePrefix><Surname>{{Surname}}</Surname><GivenName>{{GivenName}}</GivenName><Gender>{{Gender}}</Gender><Source>{{Source}}</Source><ProfileType>{{ProfileType}}</ProfileType><EntryDate>2018-10-12T00:24:27.023-07:00</EntryDate><EntryBy>Profile</EntryBy><LastEditDate>2018-10-12T00:24:27.023-07:00</LastEditDate><LastEditBy>Profile</LastEditBy>
+        </GUEST>
+      
+        <GUEST_COMM_METHOD diffgr:id=\\"GUEST_COMM_METHOD1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
+          <GuestID>{{GuestID}}</GuestID><GuestCommType>Email</GuestCommType><CommValue>{{Email}}</CommValue><FormatType>TEXT</FormatType><OptOut>false</OptOut><PreferredFlag>false</PreferredFlag>
+        </GUEST_COMM_METHOD>
+      
+        <GUEST_ISSUED_ID diffgr:id=\\"GUEST_ISSUED_ID1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
+          <IssueLogNo>0</IssueLogNo><GuestID>{{GuestID}}</GuestID><IssueDate>2018-10-12T07:24:26.549-07:00</IssueDate><ContactType>Email</ContactType><AssociateName>Unassigned</AssociateName><EntryBy>Profile</EntryBy><EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate><LastEditBy>Profile</LastEditBy><LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
+        </GUEST_ISSUED_ID>
+      
+        <GUEST_ADDRESS diffgr:id=\\"GUEST_ADDRESS1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
+          <GuestID>{{GuestID}}</GuestID><AddressType>Home</AddressType><CountryCode>null</CountryCode><PostalCode>null</PostalCode><StateCode>null</StateCode><City>null</City><AddressLine1>null</AddressLine1><AddressLine2>null</AddressLine2><Undeliverable>false</Undeliverable><PreferredFlag>true</PreferredFlag>
+        </GUEST_ADDRESS>
+      
+        <GUEST_CONTACT_LOG diffgr:id=\\"GUEST_CONTACT_LOG1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
+          <ContactLogNo>0</ContactLogNo><GuestID>{{GuestID}}</GuestID><LocationID>0</LocationID><ContactDate>2018-10-12T07:24:26.549-07:00</ContactDate><ContactTime>2018-10-12T07:24:26.549-07:00</ContactTime><ContactType>Web</ContactType><ContactItem>Profile</ContactItem><ContactStatus>Complete</ContactStatus><ContactBy>Web</ContactBy><EntryBy>Profile</EntryBy><EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate><LastEditBy>Profile</LastEditBy><LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
+        </GUEST_CONTACT_LOG>
+      
         </dstGST>
         <diffgr:before>
           
@@ -70,14 +70,14 @@ exports[`DatasetGuest .serialize => respects row ID 1`] = `
         xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\">
         <dstGST xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\">
           
-      <GUEST_COMM_METHOD diffgr:id=\\"GUEST_COMM_METHOD1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"inserted\\">
-        <GuestID>1234567890</GuestID><GuestLoginID>email@domain.com</GuestLoginID><GuestLoginPassword>password1</GuestLoginPassword>
-      </GUEST_COMM_METHOD>
-    
-      <GUEST_COMM_METHOD diffgr:id=\\"GUEST_COMM_METHOD2\\" msdata:rowOrder=\\"1\\" diffgr:hasChanges=\\"inserted\\">
-        <GuestID>1234567890</GuestID><GuestLoginID>email@domain.com</GuestLoginID><GuestLoginPassword>password1</GuestLoginPassword>
-      </GUEST_COMM_METHOD>
-    
+        <GUEST_COMM_METHOD diffgr:id=\\"GUEST_COMM_METHOD1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"inserted\\">
+          <GuestID>1234567890</GuestID><GuestLoginID>email@domain.com</GuestLoginID><GuestLoginPassword>password1</GuestLoginPassword>
+        </GUEST_COMM_METHOD>
+      
+        <GUEST_COMM_METHOD diffgr:id=\\"GUEST_COMM_METHOD2\\" msdata:rowOrder=\\"1\\" diffgr:hasChanges=\\"inserted\\">
+          <GuestID>1234567890</GuestID><GuestLoginID>email@domain.com</GuestLoginID><GuestLoginPassword>password1</GuestLoginPassword>
+        </GUEST_COMM_METHOD>
+      
         </dstGST>
         <diffgr:before>
           
@@ -107,10 +107,10 @@ exports[`DatasetGuest .serialize => returns XML representation 1`] = `
         xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\">
         <dstGST xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\">
           
-      <GUEST_LOGIN diffgr:id=\\"GUEST_LOGIN1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"inserted\\">
-        <GuestID>1234567890</GuestID><GuestLoginID>email@domain.com</GuestLoginID><GuestLoginPassword>password1</GuestLoginPassword>
-      </GUEST_LOGIN>
-    
+        <GUEST_LOGIN diffgr:id=\\"GUEST_LOGIN1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"inserted\\">
+          <GuestID>1234567890</GuestID><GuestLoginID>email@domain.com</GuestLoginID><GuestLoginPassword>password1</GuestLoginPassword>
+        </GUEST_LOGIN>
+      
         </dstGST>
         <diffgr:before>
           

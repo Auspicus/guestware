@@ -1,5 +1,5 @@
 import DatasetGuestRow, { fromElements } from './DatasetGuestRow'
-import SoapResponse from '../SoapResponse';
+import SoapResponse from '../SoapResponse'
 
 class DatasetGuest {
 
