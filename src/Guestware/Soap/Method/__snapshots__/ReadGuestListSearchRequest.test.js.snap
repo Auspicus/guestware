@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReadGuestListSearchRequest .toString => returns XML with correctly formatted query 1`] = `
+"
+      <soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\" xmlns:web=\\"http://webservices.guestware.com/\\">
+        <soapenv:Header>
+            <web:GWCNOBJ>
+              <web:UserName>{{UserName}}</web:UserName>
+              <web:PassWord>{{PassWord}}</web:PassWord>
+              <web:ApplicationName>{{AppName}}</web:ApplicationName>
+              <web:VersionNumber>{{Version}}</web:VersionNumber>
+            </web:GWCNOBJ>
+        </soapenv:Header>
+        <soapenv:Body>
+            <web:ReadGuestListSearch>
+              <web:parintStart>0</web:parintStart>
+              <web:parintEnd>1000</web:parintEnd>
+              
+              <web:parblnSortAsc>true</web:parblnSortAsc>
+              <web:parOUTintCount>1000</web:parOUTintCount>
+              <web:pardstGST msdata:SchemaSerializationMode=\\"ExcludeSchema\\" xmlns:msdata=\\"urn:schemas-microsoft-com:xml-msdata\\">
+                <xs:schema id=\\"dstGST\\" targetNamespace=\\"http://webservices.guestware.com/dstGST.xsd\\" xmlns:mstns=\\"http://webservices.guestware.com/dstGST.xsd\\" xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\" xmlns:xs=\\"http://www.w3.org/2001/XMLSchema\\" xmlns:msdata=\\"urn:schemas-microsoft-com:xml-msdata\\" xmlns:msprop=\\"urn:schemas-microsoft-com:xml-msprop\\" attributeFormDefault=\\"qualified\\" elementFormDefault=\\"qualified\\">
+                  <xs:element name=\\"dstGST\\" msdata:IsDataSet=\\"true\\" msdata:UseCurrentLocale=\\"true\\">
+                    <xs:complexType>
+                      <xs:choice minOccurs=\\"0\\" maxOccurs=\\"unbounded\\"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:schema>
+                <diffgr:diffgram xmlns:msdata=\\"urn:schemas-microsoft-com:xml-msdata\\" xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\"> 
+                  <dstGST xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\">
+                    
+        <virtual_QueryInputParameters diffgr:id=\\"virtual_QueryInputParameters1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"inserted\\">
+          <FieldName>CommValue</FieldName>
+          <FieldValue>email@domain.com</FieldValue>
+        </virtual_QueryInputParameters>
+                  </dstGST>
+                </diffgr:diffgram>
+              </web:pardstGST>
+            </web:ReadGuestListSearch>
+        </soapenv:Body>
+      </soapenv:Envelope>
+    "
+`;

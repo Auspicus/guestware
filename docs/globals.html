@@ -63,23 +63,43 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<h2 id="using-guestware">Using &quot;Guestware&quot;</h2>
-				<p>This client attempts to make it easier to interface with the Guestware API by recreating exact representations of the DataSets provided by Guestware. It can take a response from Guestware and parse it (using XPath) to find DataSet values. It can also recreate DiffGrams to send to Guestware based on these DataSets.</p>
-				<p>It provides a simple interface to make edits to values in the DataSet.</p>
-				<h2 id="potential-issues">Potential issues</h2>
-				<p>There may in some cases arise an issue where two or more parties are editing the same Dataset. This Guestware client makes no attempt to solve this issue for you so if you would like to prevent simultaneous editing of the same profile we recommend implementing a lock system.</p>
-				<h3 id="upgrading-to-v2-x">Upgrading to v2.x</h3>
-				<p>Backwards compatibility has been maintained between v2.x and v1.x.
-					However, because v2.x uses ES6 modules (<code>export</code> / <code>import</code>) you will need to
-				change your require statements from <code>require(&#39;guestware&#39;)</code> to <code>require(&#39;guestware&#39;).default</code>.</p>
-				<p>However, all API methods have been maintained (but are deprecated) for backwards compatibility.</p>
-			</div>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>External modules</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-external-module"><a href="modules/_client_.html" class="tsd-kind-icon">"<wbr>Client"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_configuration_.html" class="tsd-kind-icon">"<wbr>Configuration"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_exception_failedrequest_.html" class="tsd-kind-icon">"<wbr>Exception/<wbr>Failed<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_exception_propertynotfound_.html" class="tsd-kind-icon">"<wbr>Exception/<wbr>Property<wbr>Not<wbr>Found"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_legacy_.html" class="tsd-kind-icon">"<wbr>Legacy"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_dataset_datasetguest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Dataset/<wbr>Dataset<wbr>Guest"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_dataset_datasetguestrow_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Dataset/<wbr>Dataset<wbr>Guest<wbr>Row"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_diffgramrowaction_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Diffgram<wbr>Row<wbr>Action"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestdetailtablesrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestlistsearchrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>List<wbr>Search<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestloginguestidstringrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Login<wbr>GuestIDString<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestloginrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Login<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestrewardbalancerequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Reward<wbr>Balance<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestrewardtransactionanddetailsbyguestidrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Reward<wbr>Transaction<wbr>And<wbr>Details<wbr>ByGuestIDRequest"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_readguestvisitrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Visit<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_updateguestdetailtablesrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_method_updateguestloginrequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Login<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_soaprequest_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Soap<wbr>Request"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_soap_soapresponse_.html" class="tsd-kind-icon">"<wbr>Soap/<wbr>Soap<wbr>Response"</a></li>
+								<li class="tsd-kind-external-module"><a href="modules/_index_.html" class="tsd-kind-icon">"index"</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
+					<li class="globals current ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">

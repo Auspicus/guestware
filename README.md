@@ -1,86 +1,17 @@
-# guestware
-JS GuestWare Client
+## Using "Guestware"
 
-### Documentation
-https://auspicus.github.io/guestware/docs/
+This client attempts to make it easier to interface with the Guestware API by recreating exact representations of the DataSets provided by Guestware. It can take a response from Guestware and parse it (using XPath) to find DataSet values. It can also recreate DiffGrams to send to Guestware based on these DataSets.
 
-**[DISCLAIMER] This product is not feature complete and updates may not be backwards compatible**
+It provides a simple interface to make edits to values in the DataSet.
 
-```javascript
-require('dotenv').config();
-var Guestware = require('guestware');
+## Potential issues
 
-// Create a new instance of the Guestware
-var instance = new Guestware(
-  process.env.WDSL,
-  process.env.APPLICATION_NAME,
-  process.env.VERSION_NUMBER,
-  process.env.APPLICATION_ID,
-  process.env.USERNAME,
-  process.env.PASSWORD
-);
+There may in some cases arise an issue where two or more parties are editing the same Dataset. This Guestware client makes no attempt to solve this issue for you so if you would like to prevent simultaneous editing of the same profile we recommend implementing a lock system.
 
-// Set up request arguments (this data will be sent to GuestWare with the request)
-var requestArguments = {
-  parstrGuestID: "testemail@gmail.com"
-};
+### Upgrading to v2.x
 
-// Make a request
-instance
-.read('ReadGuestLoginGuestIDString', requestArguments)
-.then(function (response) {
-  // By default, we are returned a raw string response and a parsed version
-  // If you would like to clean up your response, use the formatResponse function
-  // This will map response nodes to a key in a new object
-  var formattedResponse = instance.formatResponse(response.parsed, {
-    id: 'GuestID',
-    email: 'GuestLoginID',
-    password: 'GuestLoginPassword',
-    langcode: 'CultureID',
-    created: 'EntryDate',
-    updated: 'LastEditDate'
-  });
-  console.log(formattedResponse);
-  // {
-  //   id: "testuserid" #from GuestID,
-  //   email: "testemail@gmail.com" #from GuestLoginID,
-  //   password: "plaintextpasswordXd" #from GuestLoginPassword,
-  //   langcode: "en" #from CultureID,
-  //   created: "2017-02-02T15:26:32.543-08:00" #from EntryDate,
-  //   updated: "2017-02-02T15:26:32.543-08:00" #from LastEditDate
-  // }
-})
-.catch(function (err) {
-  console.error(err)
-});
+Backwards compatibility has been maintained between v2.x and v1.x.
+However, because v2.x uses ES6 modules (`export` / `import`) you will need to
+change your require statements from `require('guestware')` to `require('guestware').default`.
 
-// Make a request which returns a list
-instance
-.read('ReadGuestRewardTransactionAndDetailsByGuestID', {
-  parintGuestID: 123456789
-})
-.then(function (response) {
-  // Here we are going to format a list of response data into a nice clean array
-  var formattedResponse = instance.formatResponse(response.parsed, {
-    liTagName: 'virtual_GuestRewardTransactionAndDetails', // #tag name of list item
-    map: {
-      id: 'GuestID',
-      desc: 'Description'
-    }
-  });
-  console.log(formattedResponse);
-  // [
-  //   {
-  //     id: '123456789' #from GuestID of this reward,
-  //     desc: 'A description specific to this reward' #from Description of this reward
-  //   },
-  //   {
-  //     id: '123456789',
-  //     desc: 'A different description'
-  //   }
-  // ]
-})
-.catch(function (err) {
-  console.error(err)
-});
-```
+However, all API methods have been maintained (but are deprecated) for backwards compatibility.

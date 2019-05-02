@@ -1,0 +1,31 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <ReadGuestLoginResponse xmlns="http://webservices.guestware.com/">
+         <ReadGuestLoginResult msdata:SchemaSerializationMode="ExcludeSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:schema id="dstGST" targetNamespace="http://webservices.guestware.com/dstGST.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:mstns="http://webservices.guestware.com/dstGST.xsd" xmlns="http://webservices.guestware.com/dstGST.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+               <xs:element name="dstGST" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+                  <xs:complexType>
+                     <xs:choice minOccurs="0" maxOccurs="unbounded"/>
+                  </xs:complexType>
+               </xs:element>
+            </xs:schema>
+            <diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+               <dstGST xmlns="http://webservices.guestware.com/dstGST.xsd">
+                  <GUEST_LOGIN diffgr:id="GUEST_LOGIN1" msdata:rowOrder="0">
+                     <GuestID>{{GuestID}}</GuestID>
+                     <GuestLoginID>{{Email}}</GuestLoginID>
+                     <GuestLoginPassword>{{Password}}</GuestLoginPassword>
+                     <CultureID>{{Language}}</CultureID>
+                     <LogActivity>false</LogActivity>
+                     <DisableLogin>false</DisableLogin>
+                     <EntryDate>2017-02-02T15:26:32.543-08:00</EntryDate>
+                     <EntryBy>Profile</EntryBy>
+                     <LastEditDate>2017-08-21T14:32:20.743-07:00</LastEditDate>
+                     <LastEditBy>Profile</LastEditBy>
+                  </GUEST_LOGIN>
+               </dstGST>
+            </diffgr:diffgram>
+         </ReadGuestLoginResult>
+      </ReadGuestLoginResponse>
+   </soap:Body>
+</soap:Envelope>

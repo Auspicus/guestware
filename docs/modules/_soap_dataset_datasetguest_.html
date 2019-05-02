@@ -3,17 +3,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>guestware</title>
+	<title>&quot;Soap/Dataset/DatasetGuest&quot; | guestware</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
 <header>
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">guestware</a>
+					<a href="../index.html" class="title">guestware</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -53,99 +53,141 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_soap_dataset_datasetguest_.html">&quot;Soap/Dataset/DatasetGuest&quot;</a>
 				</li>
 			</ul>
-			<h1> guestware</h1>
+			<h1>External module &quot;Soap/Dataset/DatasetGuest&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<h2 id="using-guestware">Using &quot;Guestware&quot;</h2>
-				<p>This client attempts to make it easier to interface with the Guestware API by recreating exact representations of the DataSets provided by Guestware. It can take a response from Guestware and parse it (using XPath) to find DataSet values. It can also recreate DiffGrams to send to Guestware based on these DataSets.</p>
-				<p>It provides a simple interface to make edits to values in the DataSet.</p>
-				<h2 id="potential-issues">Potential issues</h2>
-				<p>There may in some cases arise an issue where two or more parties are editing the same Dataset. This Guestware client makes no attempt to solve this issue for you so if you would like to prevent simultaneous editing of the same profile we recommend implementing a lock system.</p>
-				<h3 id="upgrading-to-v2-x">Upgrading to v2.x</h3>
-				<p>Backwards compatibility has been maintained between v2.x and v1.x.
-					However, because v2.x uses ES6 modules (<code>export</code> / <code>import</code>) you will need to
-				change your require statements from <code>require(&#39;guestware&#39;)</code> to <code>require(&#39;guestware&#39;).default</code>.</p>
-				<p>However, all API methods have been maintained (but are deprecated) for backwards compatibility.</p>
-			</div>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_soap_dataset_datasetguest_.datasetguest.html" class="tsd-kind-icon">Dataset<wbr>Guest</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported"><a href="_soap_dataset_datasetguest_.html#fromresponse" class="tsd-kind-icon">from<wbr>Response</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+					<a name="fromresponse" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> from<wbr>Response</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Response<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><a href="../classes/_soap_soapresponse_.soapresponse.html" class="tsd-signature-type">SoapResponse</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_soap_dataset_datasetguest_.datasetguest.html" class="tsd-signature-type">DatasetGuest</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/edisch/guestware/blob/8d1a619/src/Guestware/Soap/Dataset/DatasetGuest.ts#L64">Soap/Dataset/DatasetGuest.ts:64</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <a href="../classes/_soap_soapresponse_.soapresponse.html" class="tsd-signature-type">SoapResponse</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_soap_dataset_datasetguest_.datasetguest.html" class="tsd-signature-type">DatasetGuest</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_client_.html">"<wbr>Client"</a>
+						<a href="_client_.html">"<wbr>Client"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_configuration_.html">"<wbr>Configuration"</a>
+						<a href="_configuration_.html">"<wbr>Configuration"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_exception_failedrequest_.html">"<wbr>Exception/<wbr>Failed<wbr>Request"</a>
+						<a href="_exception_failedrequest_.html">"<wbr>Exception/<wbr>Failed<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_exception_propertynotfound_.html">"<wbr>Exception/<wbr>Property<wbr>Not<wbr>Found"</a>
+						<a href="_exception_propertynotfound_.html">"<wbr>Exception/<wbr>Property<wbr>Not<wbr>Found"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_legacy_.html">"<wbr>Legacy"</a>
+						<a href="_legacy_.html">"<wbr>Legacy"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="_soap_dataset_datasetguest_.html">"<wbr>Soap/<wbr>Dataset/<wbr>Dataset<wbr>Guest"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_dataset_datasetguest_.html">"<wbr>Soap/<wbr>Dataset/<wbr>Dataset<wbr>Guest"</a>
+						<a href="_soap_dataset_datasetguestrow_.html">"<wbr>Soap/<wbr>Dataset/<wbr>Dataset<wbr>Guest<wbr>Row"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_dataset_datasetguestrow_.html">"<wbr>Soap/<wbr>Dataset/<wbr>Dataset<wbr>Guest<wbr>Row"</a>
+						<a href="_soap_diffgramrowaction_.html">"<wbr>Soap/<wbr>Diffgram<wbr>Row<wbr>Action"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_diffgramrowaction_.html">"<wbr>Soap/<wbr>Diffgram<wbr>Row<wbr>Action"</a>
+						<a href="_soap_method_readguestdetailtablesrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestdetailtablesrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a>
+						<a href="_soap_method_readguestlistsearchrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>List<wbr>Search<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestlistsearchrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>List<wbr>Search<wbr>Request"</a>
+						<a href="_soap_method_readguestloginguestidstringrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Login<wbr>GuestIDString<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestloginguestidstringrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Login<wbr>GuestIDString<wbr>Request"</a>
+						<a href="_soap_method_readguestloginrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Login<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestloginrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Login<wbr>Request"</a>
+						<a href="_soap_method_readguestrewardbalancerequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Reward<wbr>Balance<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestrewardbalancerequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Reward<wbr>Balance<wbr>Request"</a>
+						<a href="_soap_method_readguestrewardtransactionanddetailsbyguestidrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Reward<wbr>Transaction<wbr>And<wbr>Details<wbr>ByGuestIDRequest"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestrewardtransactionanddetailsbyguestidrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Reward<wbr>Transaction<wbr>And<wbr>Details<wbr>ByGuestIDRequest"</a>
+						<a href="_soap_method_readguestvisitrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Visit<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_readguestvisitrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Read<wbr>Guest<wbr>Visit<wbr>Request"</a>
+						<a href="_soap_method_updateguestdetailtablesrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_updateguestdetailtablesrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Detail<wbr>Tables<wbr>Request"</a>
+						<a href="_soap_method_updateguestloginrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Login<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_method_updateguestloginrequest_.html">"<wbr>Soap/<wbr>Method/<wbr>Update<wbr>Guest<wbr>Login<wbr>Request"</a>
+						<a href="_soap_soaprequest_.html">"<wbr>Soap/<wbr>Soap<wbr>Request"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_soaprequest_.html">"<wbr>Soap/<wbr>Soap<wbr>Request"</a>
+						<a href="_soap_soapresponse_.html">"<wbr>Soap/<wbr>Soap<wbr>Response"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="modules/_soap_soapresponse_.html">"<wbr>Soap/<wbr>Soap<wbr>Response"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
+						<a href="_index_.html">"index"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-external-module">
+						<a href="../classes/_soap_dataset_datasetguest_.datasetguest.html" class="tsd-kind-icon">Dataset<wbr>Guest</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
+						<a href="_soap_dataset_datasetguest_.html#fromresponse" class="tsd-kind-icon">from<wbr>Response</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -214,7 +256,7 @@
 	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

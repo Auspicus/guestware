@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <UpdateGuestDetailTablesResponse xmlns="http://webservices.guestware.com/">
+      <UpdateGuestDetailTablesResult msdata:SchemaSerializationMode="ExcludeSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:schema id="dstGST" targetNamespace="http://webservices.guestware.com/dstGST.xsd" xmlns:mstns="http://webservices.guestware.com/dstGST.xsd"
+          xmlns="http://webservices.guestware.com/dstGST.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+          xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+          <xs:element name="dstGST" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded" />
+            </xs:complexType>
+          </xs:element>
+        </xs:schema>
+        <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+          <dstGST xmlns="http://webservices.guestware.com/dstGST.xsd">
+            <GUEST diffgr:id="GUEST1" msdata:rowOrder="0">
+              <GuestID>{{GuestID}}</GuestID>
+              <GstRecordType>{{GstRecordType}}</GstRecordType>
+              <NamePrefix>{{Prefix}}</NamePrefix>
+              <Surname>{{Surname}}</Surname>
+              <GivenName>{{GivenName}}</GivenName>
+              <Gender>{{Gender}}</Gender>
+              <Source>{{Source}}</Source>
+              <ProfileType>{{ProfileType}}</ProfileType>
+              <EntryDate>2018-10-12T00:24:27.023-07:00</EntryDate>
+              <EntryBy>Profile</EntryBy>
+              <LastEditDate>2018-10-12T00:24:27.023-07:00</LastEditDate>
+              <LastEditBy>Profile</LastEditBy>
+            </GUEST>
+            <GUEST_COMM_METHOD diffgr:id="GUEST_COMM_METHOD1" msdata:rowOrder="0">
+              <GuestID>{{GuestID}}</GuestID>
+              <GuestCommType>Email</GuestCommType>
+              <CommValue>{{Email}}</CommValue>
+              <FormatType>TEXT</FormatType>
+              <OptOut>false</OptOut>
+              <PreferredFlag>false</PreferredFlag>
+            </GUEST_COMM_METHOD>
+            <GUEST_ISSUED_ID diffgr:id="GUEST_ISSUED_ID1" msdata:rowOrder="0">
+              <IssueLogNo>0</IssueLogNo>
+              <GuestID>{{GuestID}}</GuestID>
+              <IssueDate>2018-10-12T07:24:26.549-07:00</IssueDate>
+              <ContactType>Email</ContactType>
+              <AssociateName>Unassigned</AssociateName>
+              <EntryBy>Profile</EntryBy>
+              <EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate>
+              <LastEditBy>Profile</LastEditBy>
+              <LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
+            </GUEST_ISSUED_ID>
+            <GUEST_ADDRESS diffgr:id="GUEST_ADDRESS1" msdata:rowOrder="0">
+              <GuestID>{{GuestID}}</GuestID>
+              <AddressType>Home</AddressType>
+              <CountryCode />
+              <PostalCode />
+              <StateCode />
+              <City />
+              <AddressLine1 />
+              <AddressLine2 />
+              <Undeliverable>false</Undeliverable>
+              <PreferredFlag>true</PreferredFlag>
+            </GUEST_ADDRESS>
+            <GUEST_CONTACT_LOG diffgr:id="GUEST_CONTACT_LOG1" msdata:rowOrder="0">
+              <ContactLogNo>0</ContactLogNo>
+              <GuestID>{{GuestID}}</GuestID>
+              <LocationID>0</LocationID>
+              <ContactDate>2018-10-12T07:24:26.549-07:00</ContactDate>
+              <ContactTime>2018-10-12T07:24:26.549-07:00</ContactTime>
+              <ContactType>Web</ContactType>
+              <ContactItem>Profile</ContactItem>
+              <ContactStatus>Complete</ContactStatus>
+              <ContactBy>Web</ContactBy>
+              <EntryBy>Profile</EntryBy>
+              <EntryDate>2018-10-12T07:24:26.549-07:00</EntryDate>
+              <LastEditBy>Profile</LastEditBy>
+              <LastEditDate>2018-10-12T07:24:26.549-07:00</LastEditDate>
+            </GUEST_CONTACT_LOG>
+          </dstGST>
+        </diffgr:diffgram>
+      </UpdateGuestDetailTablesResult>
+    </UpdateGuestDetailTablesResponse>
+  </soap:Body>
+</soap:Envelope>

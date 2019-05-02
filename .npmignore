@@ -1,5 +1,7 @@
-/.gitignore
+/src
 /docs
-/index.js
+/coverage
+/tsconfig.json
+/.gitignore
 /.env
-.DS_Store
+/.babelrc

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legacy .detailMapToDataset => converts detail map array to Dataset 1`] = `
+DatasetGuest {
+  "components": Array [
+    DatasetGuestRow {
+      "diff": "modified",
+      "name": "GUEST",
+      "properties": Object {
+        "GivenName": "Bob",
+        "GuestID": "1234567890",
+        "Surname": "Dylan",
+      },
+      "updatedProperties": Object {},
+    },
+    DatasetGuestRow {
+      "diff": "inserted",
+      "name": "GUEST_INTERESTS",
+      "properties": Object {
+        "GuestID": "1234567890",
+        "Interest": "Cookies",
+      },
+      "updatedProperties": Object {},
+    },
+  ],
+}
+`;
+
+exports[`Legacy .formatResponse => converts Node to object based on map 1`] = `
+Array [
+  Object {
+    "email": "{{Email}}",
+    "id": "{{GuestID}}",
+    "password": "{{Password}}",
+  },
+]
+`;
+
+exports[`Legacy .generateReadRequestBody => returns request to send in a read request 1`] = `"<soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\" xmlns:web=\\"http://webservices.guestware.com/\\"><soapenv:Header><web:appId><web:UserName>username</web:UserName><web:PassWord>password</web:PassWord><web:ApplicationName>appName</web:ApplicationName><web:VersionNumber>version</web:VersionNumber></web:appId></soapenv:Header><soapenv:Body><web:ReadGuestDetailTables><web:parintGuestID>123456789</web:parintGuestID></web:ReadGuestDetailTables></soapenv:Body></soapenv:Envelope>"`;
+
+exports[`Legacy .generateUpdateReadRequest => returns headers with appId 1`] = `"<soapenv:Envelope xmlns:soapenv=\\"http://schemas.xmlsoap.org/soap/envelope/\\" xmlns:web=\\"http://webservices.guestware.com/\\"><soapenv:Header><web:appId><web:UserName>username</web:UserName><web:PassWord>password</web:PassWord><web:ApplicationName>appName</web:ApplicationName><web:VersionNumber>version</web:VersionNumber></web:appId></soapenv:Header><soapenv:Body><web:ReadGuestDetailTables><web:parintGuestID>123456789</web:parintGuestID></web:ReadGuestDetailTables></soapenv:Body></soapenv:Envelope>"`;
+
+exports[`Legacy .generateUpdateRequestBody => returns request to send in an update request 1`] = `"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?><soap:Envelope xmlns:soap=\\"http://schemas.xmlsoap.org/soap/envelope/\\" xmlns:xsd=\\"http://www.w3.org/2001/XMLSchema\\" xmlns:xsi=\\"http://www.w3.org/2001/XMLSchema-instance\\"><soap:Header><appId xmlns=\\"http://webservices.guestware.com/\\"><UserName>username</UserName><PassWord>password</PassWord><ApplicationName>appName</ApplicationName><VersionNumber>version</VersionNumber></appId></soap:Header><soap:Body><UpdateGuestDetailTables xmlns=\\"http://webservices.guestware.com/\\"><pardstGuestDetailTables xmlns:msdata=\\"urn:schemas-microsoft-com:xml-msdata\\" msdata:SchemaSerializationMode=\\"ExcludeSchema\\"><xs:schema xmlns:xs=\\"http://www.w3.org/2001/XMLSchema\\" xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\" xmlns:msprop=\\"urn:schemas-microsoft-com:xml-msprop\\" xmlns:mstns=\\"http://webservices.guestware.com/dstGST.xsd\\" id=\\"dstGST\\" targetNamespace=\\"http://webservices.guestware.com/dstGST.xsd\\" attributeFormDefault=\\"qualified\\" elementFormDefault=\\"qualified\\"><xs:element name=\\"dstGST\\" msdata:IsDataSet=\\"true\\" msdata:UseCurrentLocale=\\"true\\"><xs:complexType><xs:choice minOccurs=\\"0\\" maxOccurs=\\"unbounded\\"/></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\"><dstGST xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\"><GUEST diffgr:id=\\"GUEST1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"inserted\\"><GuestID>0</GuestID><Surname>Last</Surname><GivenName>First</GivenName></GUEST></dstGST><diffgr:before></diffgr:before></diffgr:diffgram></pardstGuestDetailTables></UpdateGuestDetailTables></soap:Body></soap:Envelope>"`;
+
+exports[`Legacy .getGuestInformationByEmail => returns mapped response 1`] = `
+Object {
+  "created": "2017-02-02T15:26:32.543-08:00",
+  "createdBy": "Profile",
+  "disableLogin": "false",
+  "email": "{{Email}}",
+  "id": "{{GuestID}}",
+  "language": "{{Language}}",
+  "logActivity": "false",
+  "password": "{{Password}}",
+  "updated": "2017-08-21T14:32:20.743-07:00",
+  "updatedBy": "Profile",
+}
+`;
+
+exports[`Legacy .getGuestInformationByID => returns mapped response 1`] = `
+Object {
+  "created": "2017-02-02T15:26:32.543-08:00",
+  "createdBy": "Profile",
+  "disableLogin": "false",
+  "email": "{{Email}}",
+  "id": "{{GuestID}}",
+  "language": "{{Language}}",
+  "logActivity": "false",
+  "password": "{{Password}}",
+  "updated": "2017-08-21T14:32:20.743-07:00",
+  "updatedBy": "Profile",
+}
+`;

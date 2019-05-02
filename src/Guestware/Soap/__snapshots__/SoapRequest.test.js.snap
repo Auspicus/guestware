@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SoapRequest .toString => returns XML body 1`] = `"<xml></xml>"`;
