@@ -10,11 +10,17 @@ import SoapResponse, { ParserStrictness } from './Soap/SoapResponse'
 import DiffgramRowAction from './Soap/DiffgramRowAction'
 
 import FailedRequest from './Exception/FailedRequest'
+import PropertyNotFound from './Exception/PropertyNotFound'
 
-import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
-import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
+import ReadGuestDetailTablesRequest from './Soap/Method/ReadGuestDetailTablesRequest'
 import ReadGuestListSearchRequest from './Soap/Method/ReadGuestListSearchRequest'
 import UpdateGuestLoginRequest from './Soap/Method/UpdateGuestLoginRequest'
+import ReadGuestLoginGuestIDStringRequest from './Soap/Method/ReadGuestLoginGuestIDStringRequest'
+import ReadGuestLoginRequest from './Soap/Method/ReadGuestLoginRequest'
+import ReadGuestRewardBalanceRequest from './Soap/Method/ReadGuestRewardBalanceRequest'
+import ReadGuestRewardTransactionAndDetailsByGuestIDRequest from './Soap/Method/ReadGuestRewardTransactionAndDetailsByGuestIDRequest'
+import ReadGuestVisitRequest from './Soap/Method/ReadGuestVisitRequest'
+
 import UpdateGuestDetailTablesRequest from './Soap/Method/UpdateGuestDetailTablesRequest'
 import DatasetGuest, { fromResponse as DatasetGuestFromResponse } from './Soap/Dataset/DatasetGuest'
 import DatasetGuestRow, { fromElements as DatasetGuestRowFromElement } from './Soap/Dataset/DatasetGuestRow'
@@ -29,12 +35,18 @@ export {
   DiffgramRowAction,
 
   FailedRequest,
+  PropertyNotFound,
   
-  ReadGuestLoginRequest,
-  ReadGuestLoginGuestIDStringRequest,
+  ReadGuestDetailTablesRequest,
   ReadGuestListSearchRequest,
+  ReadGuestLoginGuestIDStringRequest,
+  ReadGuestLoginRequest,
+  ReadGuestRewardBalanceRequest,
+  ReadGuestRewardTransactionAndDetailsByGuestIDRequest,
+  ReadGuestVisitRequest,
   UpdateGuestLoginRequest,
   UpdateGuestDetailTablesRequest,
+
   DatasetGuest,
   DatasetGuestFromResponse,
   DatasetGuestRow,
