@@ -26,20 +26,17 @@
     "xpath": "0.0.27"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@types/node": "^10.12.1",
     "@types/node-fetch": "^2.1.2",
     "@types/xmldom": "^0.1.29",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0",
-    "babel-preset-env": "^1.7.0",
-    "dotenv": "^4.0.0",
-    "eslint": "^5.8.0",
-    "jest-cli": "^23.5.0",
-    "jsdoc": "^3.5.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
     "pre-commit": "^1.2.2",
-    "regenerator-runtime": "^0.12.1",
-    "rimraf": "^2.6.1",
-    "typedoc": "^0.13.0",
+    "regenerator-runtime": "^0.13.2",
+    "typedoc": "^0.14.2",
     "typescript": "^3.1.4"
   }
 }
