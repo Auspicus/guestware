@@ -2,4 +2,5 @@
 /docs
 /index.js
 /.env
+/lib/Guestware/__tests__
 .DS_Store
