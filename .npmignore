@@ -5,3 +5,4 @@
 /.gitignore
 /.env
 /.babelrc
+.DS_Store
