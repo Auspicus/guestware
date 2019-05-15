@@ -13,7 +13,8 @@
     "postinstall": "npm run build",
     "build": "tsc --declaration --outDir ./lib",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "precommit-success": "echo 'Pre-commit checks passed! Committing changes.' && exit 0"
+    "precommit-success": "echo 'Pre-commit checks passed! Committing changes.' && exit 0",
+    "prepare": "npm run build"
   },
   "precommit": [
     "precommit-msg",

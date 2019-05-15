@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+
 import { ReadGuestListSearchRequest } from '../../../../lib/index.js'
 
 describe('ReadGuestListSearchRequest', () => {

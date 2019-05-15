@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime'
 import { DOMParser } from 'xmldom'
 import { DatasetGuestRowFromElement } from '../../../../lib/index.js'
 

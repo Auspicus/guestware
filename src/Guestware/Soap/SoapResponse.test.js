@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+
 import fs from 'fs'
 import path from 'path'
 import { Configuration, Client, ReadGuestLoginRequest, ReadGuestLoginGuestIDStringRequest, SoapResponse, ParserStrictness } from '../../../lib/index.js'

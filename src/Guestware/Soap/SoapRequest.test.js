@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+
 import { SoapRequest } from '../../../lib/index.js'
 
 describe('SoapRequest', () => {

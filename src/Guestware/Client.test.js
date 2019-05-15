@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+
 import { Configuration, Client, SoapRequest, FailedRequest } from '../../lib/index.js'
 
 const mockFetch = (response) => jest.fn().mockImplementation(() => Promise.resolve(response))

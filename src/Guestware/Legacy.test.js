@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+
 jest.mock('node-fetch')
 
 import fs from 'fs'
