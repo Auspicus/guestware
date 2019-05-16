@@ -10,7 +10,6 @@
   "scripts": {
     "test": "npm run build && jest",
     "docs": "typedoc --module commonjs --out docs src",
-    "postinstall": "npm run build",
     "build": "tsc --declaration --outDir ./lib",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "precommit-success": "echo 'Pre-commit checks passed! Committing changes.' && exit 0",
