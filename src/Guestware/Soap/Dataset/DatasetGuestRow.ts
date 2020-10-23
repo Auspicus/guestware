@@ -62,7 +62,7 @@ const fromElements = (elements: Element[]): DatasetGuestRow[] => {
       .keys(element.childNodes)
       .map(key => element.childNodes[key])
       .filter(child => child.nodeName && child.nodeName !== '#text')
-      .reduce((a, child) => child ? Object.assign(a, { [child.nodeName]: `${child.firstChild}` }) : a, {})
+      .reduce((a, child) => child ? Object.assign(a, { [child.nodeName]: `${child.firstChild ?? ''}` }) : a, {})
     )
   })
 }
