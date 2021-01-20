@@ -80,4 +80,20 @@ describe('DatasetGuest', () => {
     expect(dataset.getRowN('GUEST_LOGIN', 1).properties.GuestID).toEqual('0987654321')
   })
 
+  test('.serialize => does not return deleted rows in update', () => {
+    const dataset = new DatasetGuest([
+      new DatasetGuestRow('virtual_GuestPrf', DiffgramRowAction.Deleted, {
+        GuestID: '1234567890',
+        PreferenceName: 'TestPrf1',
+        PreferenceValue: 'TestVal1',
+      }),
+      new DatasetGuestRow('virtual_GuestPrf', DiffgramRowAction.Modified, {
+        GuestID: '1234567890',
+        PreferenceName: 'TestPrf2',
+        PreferenceValue: 'TestVal4',
+      })
+    ])
+    expect(dataset.serialize()).toMatchSnapshot()
+  })
+
 })

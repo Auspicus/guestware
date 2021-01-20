@@ -34,7 +34,7 @@ exports[`DatasetGuest .fromResponse => returns DatasetGuest from SoapResponse 1`
         </GUEST_ISSUED_ID>
       
         <GUEST_ADDRESS diffgr:id=\\"GUEST_ADDRESS1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
-          <GuestID>{{GuestID}}</GuestID><AddressType>Home</AddressType><CountryCode>null</CountryCode><PostalCode>null</PostalCode><StateCode>null</StateCode><City>null</City><AddressLine1>null</AddressLine1><AddressLine2>null</AddressLine2><Undeliverable>false</Undeliverable><PreferredFlag>true</PreferredFlag>
+          <GuestID>{{GuestID}}</GuestID><AddressType>Home</AddressType><CountryCode></CountryCode><PostalCode></PostalCode><StateCode></StateCode><City></City><AddressLine1></AddressLine1><AddressLine2></AddressLine2><Undeliverable>false</Undeliverable><PreferredFlag>true</PreferredFlag>
         </GUEST_ADDRESS>
       
         <GUEST_CONTACT_LOG diffgr:id=\\"GUEST_CONTACT_LOG1\\" msdata:rowOrder=\\"0\\" diffgr:hasChanges=\\"\\">
@@ -44,6 +44,53 @@ exports[`DatasetGuest .fromResponse => returns DatasetGuest from SoapResponse 1`
         </dstGST>
         <diffgr:before>
           
+        </diffgr:before>
+      </diffgr:diffgram>
+    "
+`;
+
+exports[`DatasetGuest .serialize => does not return deleted rows in update 1`] = `
+"
+      <xs:schema
+        xmlns:xs=\\"http://www.w3.org/2001/XMLSchema\\"
+        xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\" xmlns:msprop=\\"urn:schemas-microsoft-com:xml-msprop\\"
+        xmlns:mstns=\\"http://webservices.guestware.com/dstGST.xsd\\"
+        id=\\"dstGST\\"
+        targetNamespace=\\"http://webservices.guestware.com/dstGST.xsd\\"
+        attributeFormDefault=\\"qualified\\"
+        elementFormDefault=\\"qualified\\">
+          <xs:element name=\\"dstGST\\" msdata:IsDataSet=\\"true\\" msdata:UseCurrentLocale=\\"true\\">
+            <xs:complexType>
+              <xs:choice minOccurs=\\"0\\" maxOccurs=\\"unbounded\\"/>
+            </xs:complexType>
+          </xs:element>
+      </xs:schema>
+      <diffgr:diffgram
+        xmlns:msdata=\\"urn:schemas-microsoft-com:xml-msdata\\"
+        xmlns:diffgr=\\"urn:schemas-microsoft-com:xml-diffgram-v1\\">
+        <dstGST xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\">
+          
+        <virtual_GuestPrf diffgr:id=\\"virtual_GuestPrf2\\" msdata:rowOrder=\\"1\\" diffgr:hasChanges=\\"modified\\">
+          <GuestID>1234567890</GuestID><PreferenceName>TestPrf2</PreferenceName><PreferenceValue>TestVal4</PreferenceValue>
+        </virtual_GuestPrf>
+      
+        </dstGST>
+        <diffgr:before>
+          
+        <virtual_GuestPrf
+          diffgr:id=\\"virtual_GuestPrf1\\"
+          xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\"
+          msdata:rowOrder=\\"0\\">
+          <GuestID>1234567890</GuestID><PreferenceName>TestPrf1</PreferenceName><PreferenceValue>TestVal1</PreferenceValue>
+        </virtual_GuestPrf>
+      
+        <virtual_GuestPrf
+          diffgr:id=\\"virtual_GuestPrf2\\"
+          xmlns=\\"http://webservices.guestware.com/dstGST.xsd\\"
+          msdata:rowOrder=\\"1\\">
+          <GuestID>1234567890</GuestID><PreferenceName>TestPrf2</PreferenceName><PreferenceValue>TestVal4</PreferenceValue>
+        </virtual_GuestPrf>
+      
         </diffgr:before>
       </diffgr:diffgram>
     "

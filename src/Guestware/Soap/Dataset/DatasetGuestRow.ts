@@ -25,7 +25,7 @@ class DatasetGuestRow {
     const newProperties = serializeProperties({ ...this.properties, ...this.updatedProperties })
     
     return {
-      before: this.diff === DiffgramRowAction.Modified
+      before: this.diff === DiffgramRowAction.Modified || this.diff === DiffgramRowAction.Deleted
       ? `
         <${this.name}
           diffgr:id="${this.name}${rowId + 1}"
@@ -35,11 +35,11 @@ class DatasetGuestRow {
         </${this.name}>
       `
       : ``,
-      current: `
+      current: this.diff !== DiffgramRowAction.Deleted ? `
         <${this.name} diffgr:id="${this.name}${rowId + 1}" msdata:rowOrder="${rowId}" diffgr:hasChanges="${this.diff}">
           ${newProperties}
         </${this.name}>
-      `
+      ` : ``
     }
   }
 
