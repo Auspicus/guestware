@@ -23,20 +23,31 @@ class DatasetGuestRow {
     )
     const oldProperties = serializeProperties(this.properties)
     const newProperties = serializeProperties({ ...this.properties, ...this.updatedProperties })
+
+    const includeInBefore = (
+      this.diff === DiffgramRowAction.Modified
+      || this.diff === DiffgramRowAction.Deleted
+    )
+    const includeInCurrent = this.diff !== DiffgramRowAction.Deleted
+
+    const diffgrHasChanges = this.diff === DiffgramRowAction.NotSet
+      ? ``
+      : ` diffgr:hasChanges="${this.diff}"`
     
     return {
-      before: this.diff === DiffgramRowAction.Modified || this.diff === DiffgramRowAction.Deleted
-      ? `
+      before: includeInBefore ? `
         <${this.name}
           diffgr:id="${this.name}${rowId + 1}"
           xmlns="http://webservices.guestware.com/dstGST.xsd"
           msdata:rowOrder="${rowId}">
           ${oldProperties}
         </${this.name}>
-      `
-      : ``,
-      current: this.diff !== DiffgramRowAction.Deleted ? `
-        <${this.name} diffgr:id="${this.name}${rowId + 1}" msdata:rowOrder="${rowId}" diffgr:hasChanges="${this.diff}">
+      ` : ``,
+      current: includeInCurrent ? `
+        <${this.name}
+          diffgr:id="${this.name}${rowId + 1}" 
+          xmlns="http://webservices.guestware.com/dstGST.xsd"
+          msdata:rowOrder="${rowId}"${diffgrHasChanges}>
           ${newProperties}
         </${this.name}>
       ` : ``
